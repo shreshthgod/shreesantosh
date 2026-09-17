@@ -1,0 +1,582 @@
+{
+  "header": {
+    "color": "rgb(0, 0, 0)",
+    "opacity": "1",
+    "transform": "none",
+    "letterSpacing": "normal",
+    "width": "1440px",
+    "left": "0px",
+    "top": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "mixBlendMode": "difference",
+    "transition": "all",
+    "fontFamily": "sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "padding": "0px",
+    "gap": "normal",
+    "display": "block",
+    "justifyContent": "normal",
+    "alignItems": "normal",
+    "position": "fixed",
+    "zIndex": "10"
+  },
+  "logo": {
+    "html": "<div class=\"framer-10gpwi-container\" data-framer-name=\"Logo Animated\" name=\"Logo Animated\" style=\"opacity: 1;\"><div name=\"Logo Animated\" class=\"framer-7gNkJ framer-1x96xid framer-v-123pm6t\" data-framer-name=\"Idle\" style=\"height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-he5x2g-container\" data-framer-name=\"Logo_Contraction\" name=\"Logo_Contraction\" style=\"opacity:0\"><!--$--><div style=\"height:100%;width:100%\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1810 188\" width=\"1810\" height=\"188\" preserveAspectRatio=\"xMidYMid slice\" style=\"width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);\"><defs><clipPath id=\"__lottie_element_2\"><rect width=\"1810\" height=\"188\" x=\"0\" y=\"0\"></rect></clipPath></defs><g clip-path=\"url(#__lottie_element_2)\"><g id=\"106\" transform=\"matrix(1,0,0,1,-0.25,7.950004577636719)\" opacity=\"1\" style=\"display: block;\"><g opacity=\"1\" transform=\"matrix(1,0,0,1,51,86.0999984741211)\"><path fill=\"rgb(255,255,255)\" fill-opacity=\"1\" d=\" M-19.850000381469727,-85.8499984741211 C-10.350000381469727,-85.8499984741211 6.949999809265137,-85.05000305175781 19.549999237060547,-75.05000305175781 C24.950000762939453,-70.94999694824219 35.04999923706055,-60.349998474121094 35.04999923706055,-39.54999923706055 C35.04999923706055,-18.75 33.25,-16.149999618530273 18.049999237060547,-5.849999904632568 C42.04999923706055,0.05000000074505806 50.75,20.950000762939453 50.75,37.45000076293945 C50.75,53.95000076293945 42.54999923706055,67.3499984741211 33.25,74.55000305175781 C19.549999237060547,85.3499984741211 3.8499999046325684,85.8499984741211 -7.949999809265137,85.8499984741211 C-7.949999809265137,85.8499984741211 -50.75,85.8499984741211 -50.75,85.8499984741211 C-50.75,85.8499984741211 -50.75,-85.8499984741211 -50.75,-85.8499984741211 C-50.75,-85.8499984741211 -19.850000381469727,-85.8499984741211 -19.850000381469727,-85.8499984741211z M-31.649999618530273,-10.350000381469727 C-31.649999618530273,-10.350000381469727 -17.25,-10.350000381469727 -17.25,-10.350000381469727 C-7.25,-10.350000381469727 16.450000762939453,-12.449999809265137 16.450000762939453,-38.95000076293945 C16.450000762939453,-65.44999694824219 -11.350000381469727,-67.8499984741211 -16.75,-67.8499984741211 C-16.75,-67.8499984741211 -31.649999618530273,-67.8499984741211 -31.649999618530273,-67.8499984741211 C-31.649999618530273,-67.8499984741211 -31.649999618530273,-10.350000381469727 -31.649999618530273,-10.350000381469727z M-31.649999618530273,67.94999694824219 C-31.649999618530273,67.94999694824219 -9.75,67.94999694824219 -9.75,67.94999694824219 C1.350000023841858,67.94999694824219 12.149999618530273,67.1500015258789 20.350000381469727,60.75 C27.049999237060547,55.849998474121094 31.649999618530273,47.349998474121094 31.649999618530273,37.04999923706055 C31.649999618530273,26.75 23.649999618530273,15.449999809265137 16.950000762939453,11.850000381469727 C10.550000190734863,8.25 1.4500000476837158,6.650000095367432 -12.149999618530273,6.650000095367432 C-12.1499996"
+  },
+  "mailto": "<a class=\"framer-1osk76d framer-1u9g8ez\" data-framer-name=\"MailTo\" href=\"mailto:dream@bureautonalli.com\" rel=\"noopener\" style=\"opacity: 1;\"><div class=\"framer-1hjg5mi-container\" style=\"opacity: 1;\"><div class=\"framer-vKJst framer-1lq6wnv framer-v-1lq6wnv\" data-framer-name=\"Idle\" data-highlight=\"true\" tabindex=\"0\" style=\"opacity: 1;\"><div class=\"framer-bnwg84\" data-framer-name=\"Wrapper\" style=\"opacity: 1;\"><div class=\"framer-1c33hu3\" data-framer-name=\"Square\" style=\"transform: translateY(-50%); opacity: 1;\"><div data-framer-component-type=\"SVG\" parentsize=\"0\" _constraints=\"[object Object]\" rotation=\"0\" shadows=\"\" class=\"framer-1gi50r6\" aria-hidden=\"true\" style=\"image-rendering: pixelated; flex-shrink: 0; background-size: 100% 100%; background-image: url(&quot;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 11 11%22 overflow=%22visible%22&gt;&lt;path d=%22M 0 0 L 11 0 L 11 11 L 0 11 Z%22 fill=%22rgb(255, 255, 255)%22&gt;&lt;/path&gt;&lt;/svg&gt;&quot;); opacity: 1;\"></div></div><div class=\"framer-1b61dpw\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-tcooor: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: translateY(-50%); opacity: 1;\"><div dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgTWVkaXVt;--framer-font-family:&quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:500;--framer-line-height:1.1em;--framer-text-color:var(--extracted-tcooor, rgb(255, 255, 255));--framer-text-transform:uppercase\">Let's Talk</div></div></div></div></div></a>",
+  "heroMain": "<div class=\"framer-1qxm7hy\" data-framer-cursor=\"1p4b09i\" data-framer-name=\"Expertise\"><div class=\"framer-ownz\" data-framer-name=\"H1\"><div class=\"framer-1wx9ono\" data-framer-appear-id=\"1wx9ono\" data-framer-name=\"H1_Expertise\" data-framer-component-type=\"RichTextContainer\" style=\"opacity: 1; transform: none; will-change: transform;\"><div dir=\"auto\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgTWVkaXVt;--framer-font-family:&quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:500;--framer-line-height:100%;--framer-text-color:rgb(255, 255, 255);--framer-text-transform:uppercase\" class=\"framer-text\">Our Expertise</div></div></div><div class=\"framer-16m60ty\" data-framer-name=\"Wrapper\"><div class=\"framer-1wt1ga\" data-framer-appear-id=\"1wt1ga\" style=\"opacity: 1; transform: none; will-change: transform;\"><!--$--><!--$--><div class=\"ssr-variant\"><div class=\"framer-mxo7fs-container\"><!--$--><a class=\"framer-3DbMd framer-6w91hb framer-v-6w91hb framer-xxa56r\" data-framer-name=\"Desktop\" href=\"./projects/expertise/campaigns\" style=\"height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-v0vhuf\" data-framer-name=\"Wrapper\" style=\"opacity: 1;\"><div class=\"framer-1huh799\" data-framer-name=\"Arrow\" style=\"opacity:0\"><svg class=\"framer-cA4IV framer-1w2qttr\" role=\"presentation\" viewBox=\"0 0 24 24\" style=\"--184eszs: rgb(255, 255, 255); --5m02b3: 2; transform: translate(-50%, -50%); opacity: 1;\"><use href=\"#950771929\"></use></svg></div><div class=\"framer-1gaadho\" data-framer-name=\"Text\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-tcooor: rgb(255, 255, 255); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;\"><div dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgUmVndWxhcg==;--framer-font-family:&quot;Helvetica Neue Regular&quot;, &quot;Helvetica Neue Regular Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-line-height:1.4em;--framer-text-color:var(--extracted-tcooor, rgb(255, 255, 255))\">Campaign Strategy &amp; Creative Direction</div></div></div></a><!--/$--></div></div><!--/$--><!--$--><div class=\"ssr-variant\"><div class=\"framer-mxo7fs-container\"><!--$--><a class=\"framer-3DbMd framer-6w91hb framer-v-6w91hb framer-xxa56r\" data-framer-name=\"Desktop\" href=\"./projects/expertise/visual-content\" style=\"height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-v0vhuf\" data-framer-name=\"Wrapper\" style=\"opacity: 1;\"><div class=\"framer-1huh799\" data-framer-name=\"Arrow\" style=\"opacity:0\"><svg class=\"framer-cA4IV framer-1w2qttr\" role=\"presentation\" viewBox=\"0 0 24 24\" style=\"--184eszs: rgb(255, 255, 255); --5m02b3: 2; transform: translate(-50%, -50%); opacity: 1;\"><use href=\"#950771929\"></use></svg></div><div class=\"framer-1gaadho\" data-framer-name=\"Text\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-tcooor: rgb(255, 255, 255); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;\"><div dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgUmVndWxhcg==;--framer-font-family:&quot;Helvetica Neue Regular&quot;, &quot;Helvetica Neue Regular Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-line-height:1.4em;--framer-text-color:var(--extracted-tcooor, rgb(255, 255, 255))\">Visual Content &amp; Short Film</div></div></div></a><!--/$--></div></div><!--/$--><!--$--><div class=\"ssr-variant\"><div class=\"framer-mxo7fs-container\"><!-",
+  "studioH1": {
+    "color": "rgb(255, 255, 255)",
+    "opacity": "1",
+    "transform": "none",
+    "letterSpacing": "normal",
+    "width": "91.8125px",
+    "left": "auto",
+    "top": "auto",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "mixBlendMode": "normal",
+    "transition": "all",
+    "fontFamily": "\"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "lineHeight": "14px",
+    "padding": "0px",
+    "gap": "normal",
+    "display": "block",
+    "justifyContent": "normal",
+    "alignItems": "normal",
+    "position": "static",
+    "zIndex": "auto"
+  },
+  "expertiseBefore": [
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 360.5,
+      "transition": "all"
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "0",
+      "left": 361,
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "svg",
+      "transform": "matrix(1, 0, 0, 1, -6.5, -6.5)",
+      "opacity": "1",
+      "left": 361,
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "use",
+      "transform": "none",
+      "opacity": "1",
+      "left": 361.8125,
+      "transition": "all"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 378,
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 378,
+      "transition": "all"
+    }
+  ],
+  "expertiseAfter": [
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 377.5
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 378
+    },
+    {
+      "name": null,
+      "tag": "svg",
+      "transform": "matrix(1, 0, 0, 1, -6.5, -6.5)",
+      "opacity": "1",
+      "left": 378
+    },
+    {
+      "name": null,
+      "tag": "use",
+      "transform": "none",
+      "opacity": "1",
+      "left": 378.8125
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 395
+    },
+    {
+      "name": null,
+      "tag": "DIV",
+      "transform": "none",
+      "opacity": "1",
+      "left": 395
+    }
+  ],
+  "mailtoAfter": [
+    {
+      "name": null,
+      "transform": "none",
+      "w": 190,
+      "h": 78,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": "Hover",
+      "transform": "none",
+      "w": 190,
+      "h": 78,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": "Wrapper",
+      "transform": "none",
+      "w": 130,
+      "h": 18,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": "Square",
+      "transform": "matrix(1, 0, 0, 1, 0.626206, -5.5)",
+      "w": 11,
+      "h": 11,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": null,
+      "transform": "none",
+      "w": 11,
+      "h": 11,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": null,
+      "transform": "matrix(1, 0, 0, 1, 0, -7.70312)",
+      "w": 76,
+      "h": 15.40625,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "br": "0px"
+    },
+    {
+      "name": null,
+      "transform": "none",
+      "w": 76,
+      "h": 15.40625,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "br": "0px"
+    }
+  ],
+  "rollingCss": "\n    .rolling-text-inner-r15 {\n      --font-size: 14px;\n      --text: rgb(255, 255, 255);\n      --line-height-abs: 16.8px;\n      box-sizing: border-box; margin: 0; padding: 0; vertical-align: top;\n      display: flex; overflow: hidden; width: max-content;\n      font-family: \"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif; font-size: 14px;\n      text-transform: uppercase; user-select: none;\n      text-shadow: 0 var(--line-height-abs) 0 var(--text);\n    }\n    .rolling-text-inner-r15 span {\n      display: block; -webkit-backface-visibility: hidden; backface-visibility: hidden;\n      white-space: pre; flex-shrink: 0;\n      font-family: inherit; font-weight: inherit; font-style: inherit;\n      font-size: inherit; letter-spacing: inherit;\n      line-height: 1.2em;\n      color: var(--text);\n    }\n  \n\n    .rolling-text-inner-r16 {\n      --font-size: 14px;\n      --text: rgb(255, 255, 255);\n      --line-height-abs: 16.8px;\n      box-sizing: border-box; margin: 0; padding: 0; vertical-align: top;\n      display: flex; overflow: hidden; width: max-content;\n      font-family: \"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif; font-size: 14px;\n      text-transform: uppercase; user-select: none;\n      text-shadow: 0 var(--line-height-abs) 0 var(--text);\n    }\n    .rolling-text-inner-r16 span {\n      display: block; -webkit-backface-visibility: hidden; backface-visibility: hidden;\n      white-space: pre; flex-shrink: 0;\n      font-family: inherit; font-weight: inherit; font-style: inherit;\n      font-size: inherit; letter-spacing: inherit;\n      line-height: 1.2em;\n      color: var(--text);\n    }\n  \n\n    .rolling-text-inner-r18 {\n      --font-size: 14px;\n      --text: rgb(255, 255, 255);\n      --line-height-abs: 16.8px;\n      box-sizing: border-box; margin: 0; padding: 0; vertical-align: top;\n      display: flex; overflow: hidden; width: max-content;\n      font-family: \"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif; font-size: 14px;\n      text-transform: uppercase; user-select: none;\n      text-shadow: 0 var(--line-height-abs) 0 var(--text);\n    }\n    .rolling-text-inner-r18 span {\n      display: block; -webkit-backface-visibility: hidden; backface-visibility: hidden;\n      white-space: pre; flex-shrink: 0;\n      font-family: inherit; font-weight: inherit; font-style: inherit;\n      font-size: inherit; letter-spacing: inherit;\n      line-height: 1.2em;\n      color: var(--text);\n    }\n  ",
+  "rollingHtml": "<a class=\"framer-195b4y6 framer-8reziw\" data-framer-name=\"Projects\" href=\"./projects\" style=\"opacity: 1;\"><div class=\"framer-cbhy6w-container\" style=\"opacity: 1;\"><div style=\"display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; overflow: hidden; padding: 17px 0px; box-sizing: border-box;\"><span class=\"rolling-text-inner-r15\"><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">P</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">r</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">o</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">j</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">e</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">c</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">t</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: none;\">s</span></span><style>\n    .rolling-text-inner-r15 {\n      --font-size: 14px;\n      --text: rgb(255, 255, 255);\n      --line-height-abs: 16.8px;\n      box-sizing: border-box; margin: 0; padding: 0; vertical-align: top;\n      display: flex; overflow: hidden; width: max-content;\n      font-family: \"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif; font-size: 14px;\n      text-transform: uppercase; user-select: none;\n      text-shadow: 0 var(--line-height-abs) 0 var(--text);\n    }\n    .rolling-text-inner-r15 span {\n      display: block; -webkit-backface-vis",
+  "clock": {
+    "html": "<div class=\"framer-qxu0ub\" data-framer-name=\"Paris Time\" style=\"opacity: 1;\"><div class=\"framer-1fjz8de\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgTWVkaXVt;--framer-font-family:&quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:500;--framer-line-height:1em;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255));--framer-text-transform:uppercase\">Paris</p></div><div class=\"framer-1s9tk31-container\" style=\"opacity: 1;\"><!--$--><div style=\"font-family:Helvetica Neue Medium;font-size:14px;font-weight:400;color:#ffffff\">10:41</div><!--/$--></div></div>",
+    "color": "rgb(255, 255, 255)",
+    "opacity": "1"
+  },
+  "navigation": "<header class=\"framer-rk8wva hidden-1dd0ziz\" data-framer-name=\"Navigation\"><div class=\"framer-m0diwx-container\" data-framer-appear-id=\"m0diwx\" data-framer-cursor=\"1p4b09i\" style=\"opacity: 1; transform: translateX(-50%); will-change: transform;\"><div class=\"framer-1ITmB framer-1226les framer-v-1226les\" data-framer-name=\"Variant 1\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-6ukwra\" data-framer-name=\"3f\" style=\"opacity: 1;\"><div class=\"framer-k7zd67\" data-framer-name=\"Wrapper\" style=\"opacity: 1;\"><!--$--><a class=\"framer-195b4y6 framer-8reziw\" data-framer-name=\"Projects\" href=\"./projects\" style=\"opacity: 1;\"><div class=\"framer-cbhy6w-container\" style=\"opacity: 1;\"><div style=\"display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; overflow: hidden; padding: 17px 0px; box-sizing: border-box;\"><span class=\"rolling-text-inner-r15\"><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: translateY(-16.8px); will-change: transform;\">P</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: translateY(-16.8px); will-change: transform;\">r</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: translateY(-16.8px); will-change: transform;\">o</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: translateY(-16.8px); will-change: transform;\">j</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 1.2em; transform: translateY(-16.8px); will-change: transform;\">e</span><span style=\"display: block; font-family: &quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif; f",
+  "scrollAt2300": 2300,
+  "projectHtml": "<a class=\"framer-1p3e7jr framer-lixq1o\" data-framer-name=\"CTA\" href=\"./projects/libre-berry-crush-digital-capsule\" style=\"opacity: 1;\"><div class=\"framer-zxhpwo\" data-framer-name=\"Info\" style=\"opacity: 1;\"><div class=\"framer-iywulk\" data-framer-name=\"Client\" style=\"opacity: 1;\"><div class=\"framer-d94wre\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgQm9sZA==;--framer-font-family:&quot;Helvetica Neue Bold&quot;, &quot;Helvetica Neue Bold Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-font-weight:700;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255));--framer-text-transform:uppercase\">YSL Beauty</p></div></div><div class=\"framer-40a5xu\" data-framer-name=\"Project\" style=\"opacity: 1;\"><div class=\"framer-835hw5\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgUmVndWxhcg==;--framer-font-family:&quot;Helvetica Neue Regular&quot;, &quot;Helvetica Neue Regular Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255));--framer-text-transform:uppercase\">Libre Berry Crush Digital Capsule</p></div></div><div class=\"framer-njhjh2\" data-framer-name=\"Year\" style=\"opacity: 1;\"><div class=\"framer-bishmk\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgUmVndWxhcg==;--framer-font-family:&quot;Helvetica Neue Regular&quot;, &quot;Helvetica Neue Regular Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))\">2026</p></div></div></div><div class=\"framer-nspv56\" data-framer-name=\"ViewCase\" style=\"opacity: 1;\"><div class=\"framer-lq6kv6-container\" style=\"opacity: 1;\"><div class=\"framer-oM56t framer-1g8hlz5 framer-v-1g8hlz5\" data-framer-name=\"Desktop\" style=\"opacity: 1;\"><div class=\"framer-1lmxbvu\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: rgb(255, 255, 255); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p dir=\"auto\" class=\"framer-text\" style=\"--font-selector:Q1VTVE9NVjI7SGVsdmV0aWNhIE5ldWUgTWVkaXVt;--framer-font-family:&quot;Helvetica Neue Medium&quot;, &quot;Helvetica Neue Medium Placeholder&quot;, sans-serif;--framer-font-size:12px;--framer-font-weight:500;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255));--framer-text-transform:uppercase\">View</p></div><div class=\"framer-oukfmr\" data-framer-name=\"Icon\" style=\"opacity: 1;\"><div class=\"framer-148u4dd\" data-framer-name=\"Cross\" style=\"transform: none; opacity: 1;\"><div style=\"position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0\" data-framer-background-image-wrapper=\"true\"><img decoding=\"auto\" width=\"14\" height=\"14\" src=\"https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&amp;height=14\" alt=\"\" style=\"display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover\"></div></div></div></div></div></div></a>",
+  "projectStyles": [
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        30,
+        426,
+        1320,
+        47
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        30,
+        426,
+        50,
+        14
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "P",
+      "text": "Miu Miu",
+      "rect": [
+        30,
+        426,
+        50,
+        14
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Helvetica Neue Bold\" 12px/14.4px 700 uppercase",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "static",
+      "transition": "all"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        30,
+        443,
+        154,
+        14
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "P",
+      "text": "Miutine Digital Capsule",
+      "rect": [
+        30,
+        443,
+        154,
+        14
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Helvetica Neue Regular\" 12px/14.4px 400 uppercase",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "static",
+      "transition": "all"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        30,
+        459,
+        27,
+        14
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "P",
+      "text": "2025",
+      "rect": [
+        30,
+        459,
+        27,
+        14
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Helvetica Neue Regular\" 12px/14.4px 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "static",
+      "transition": "all"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        1350,
+        425,
+        70,
+        50
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        1350,
+        425,
+        70,
+        50
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "P",
+      "text": "View",
+      "rect": [
+        1360,
+        443,
+        30,
+        14
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Helvetica Neue Medium\" 12px/14.4px 500 uppercase",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "static",
+      "transition": "all"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        1390,
+        425,
+        30,
+        50
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "text": null,
+      "rect": [
+        1400,
+        445,
+        10,
+        10
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "relative",
+      "transition": "all"
+    },
+    {
+      "name": null,
+      "tag": "IMG",
+      "text": "",
+      "rect": [
+        1400,
+        445,
+        10,
+        10
+      ],
+      "color": "rgb(0, 0, 238)",
+      "font": "sans-serif 12px/normal 400 none",
+      "opacity": "1",
+      "transform": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pos": "static",
+      "transition": "all"
+    }
+  ],
+  "projectHover": [
+    {
+      "name": "Info",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        1320
+      ]
+    },
+    {
+      "name": "Client",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        50
+      ]
+    },
+    {
+      "name": null,
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        50
+      ]
+    },
+    {
+      "name": "Project",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        154
+      ]
+    },
+    {
+      "name": null,
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        154
+      ]
+    },
+    {
+      "name": "Year",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        27
+      ]
+    },
+    {
+      "name": null,
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        30,
+        27
+      ]
+    },
+    {
+      "name": "ViewCase",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1350,
+        70
+      ]
+    },
+    {
+      "name": "Desktop",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1350,
+        70
+      ]
+    },
+    {
+      "name": null,
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1360,
+        30
+      ]
+    },
+    {
+      "name": "Icon",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1390,
+        30
+      ]
+    },
+    {
+      "name": "Cross",
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1400,
+        10
+      ]
+    },
+    {
+      "name": null,
+      "opacity": "1",
+      "transform": "none",
+      "rect": [
+        1400,
+        10
+      ]
+    }
+  ],
+  "lenis": {
+    "htmlClass": "lenis",
+    "lenisGlobal": "undefined",
+    "inlineLenis": "html,body,#main{box-sizing:border-box;margin:0;padding:0}:root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*{box-sizing:border-box;-webkit-font-smoothing:inherit}h1,h2,h3,h4,h5,h6,p,figure{margin:0}body,input,textarea,select,button{font-family:sans-serif;font-size:12px}body{--token-412736a6-764a-4748-80bf-a9c04ad63339:#fff;--framer-will-change-override:none}@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)){body{--framer-will-change-override:transform}}@supports (background:-webkit-named-image(i)) and (not (position-area:top right)){body{--framer-will-change-filter-override:filter}}[data-framer-component-type=Text] div div span,[data-framer-component-type=Text] a div span,[data-framer-component-type=Text] span span span,[data-framer-component-type=Text] p span span,[data-framer-component-type=Text] h1 span span,[data-framer-component-type=Text] h2 span span,[data-framer-component-type=Text] h3 span span,[data-framer-component-type=Text] h4 span span,[data-framer-component-type=Text] h5 span span,[data-framer-component-type=Text] h6 span span,[data-framer-component-type=Text] a{font-family:var(--font-family);font-style:var(-"
+  }
+}

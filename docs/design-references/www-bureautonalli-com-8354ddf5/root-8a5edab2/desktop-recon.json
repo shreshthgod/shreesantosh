@@ -1,0 +1,2849 @@
+{
+  "title": "Bureau Tonalli | CGI Studio Paris | Creative Direction & CGI Production",
+  "scrollHeight": 8532,
+  "htmlClass": "lenis",
+  "bodyStyle": {
+    "bg": "rgb(255, 255, 255)",
+    "color": "rgb(0, 0, 0)"
+  },
+  "fonts": [
+    [
+      "\"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif | 14px | 500 | lh 16.8px | ls normal | uppercase",
+      22
+    ],
+    [
+      "sans-serif | 12px | 400 | lh normal | ls normal | none",
+      13
+    ],
+    [
+      "\"Helvetica Neue Bold\", \"Helvetica Neue Bold Placeholder\", sans-serif | 12px | 700 | lh 14.4px | ls normal | uppercase",
+      8
+    ],
+    [
+      "\"Helvetica Neue Regular\", \"Helvetica Neue Regular Placeholder\", sans-serif | 12px | 400 | lh 14.4px | ls normal | uppercase",
+      8
+    ],
+    [
+      "\"Helvetica Neue Regular\", \"Helvetica Neue Regular Placeholder\", sans-serif | 12px | 400 | lh 14.4px | ls normal | none",
+      8
+    ],
+    [
+      "\"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif | 12px | 500 | lh 14.4px | ls normal | uppercase",
+      8
+    ],
+    [
+      "\"Helvetica Neue Regular\", \"Helvetica Neue Regular Placeholder\", sans-serif | 12px | 400 | lh 16.8px | ls normal | none",
+      5
+    ],
+    [
+      "\"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif | 14px | 500 | lh 14px | ls normal | uppercase",
+      3
+    ],
+    [
+      "\"Helvetica Neue Medium\", \"Helvetica Neue Medium Placeholder\", sans-serif | 14px | 500 | lh 15.4px | ls normal | uppercase",
+      1
+    ],
+    [
+      "\"Helvetica Neue Medium\" | 14px | 400 | lh normal | ls normal | none",
+      1
+    ]
+  ],
+  "colors": [
+    [
+      "rgb(255, 255, 255)",
+      64
+    ],
+    [
+      "rgb(0, 0, 0)",
+      10
+    ],
+    [
+      "rgb(0, 0, 238)",
+      3
+    ]
+  ],
+  "bgs": [
+    [
+      "rgb(0, 0, 0)",
+      10
+    ],
+    [
+      "rgb(255, 255, 255)",
+      1
+    ]
+  ],
+  "transitions": [
+    [
+      "all",
+      505
+    ]
+  ],
+  "animations": [],
+  "canvases": [],
+  "iframes": [
+    "https://framer.com/edit?framerSiteId=1a54247f77a8ad85bc5d4547bf556e0410415a8b20712102583b6f3f5ac1f863&source=www.bureautonalli.com&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1789634324101"
+  ],
+  "videos": [
+    {
+      "src": "blob:https://www.bureautonalli.com/613dbd82-13cf-463d-8f7d-5406d7a7b5eb",
+      "poster": "https://framerusercontent.com/images/oVzArxiicLBgf9OtWvP6r0B83iE.jpeg?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/172a310c-1f78-4011-adc1-91b88bc29b04",
+      "poster": "https://framerusercontent.com/images/UIGbGhOdkurxE8CJ2Q5qPZ34cA.webp?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        895.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/b0723e66-afbe-46dc-8071-5cbcaccd283f",
+      "poster": "https://framerusercontent.com/images/KWiTy1eFX7NAgtIkLg7rmyL8kOs.webp?width=1024&height=1280",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        1849.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/c2e3fa40-50d9-4f1f-9802-a6621550d394",
+      "poster": "https://framerusercontent.com/images/mt0yvQJlIK4WfTxZYZ7DYovCwg.jpg?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        2803.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/da73fd64-1df8-480e-8c3e-55abb38ad2e0",
+      "poster": "https://framerusercontent.com/images/viPJBD38OjLziA2FYgGlYIRSVyA.jpg?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        3757.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/0638b7f2-a6b7-401b-a290-fa5ef30ed85a",
+      "poster": "https://framerusercontent.com/images/DIAkGR7pyYHahrdqXZ7MGc09YU.webp?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        4711.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/755b0457-9221-4f09-aa66-31ded2b3a634",
+      "poster": "https://framerusercontent.com/images/4CCJyZQyn7VUycWrRBdUmA3drwo.jpeg?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        5665.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/5c2240ef-c99a-45b5-b557-2ed30a2a7486",
+      "poster": "https://framerusercontent.com/images/yEl1Oyo8dnCjMmPtWRwT5GL2vAs.jpeg?width=1280&height=720",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        6619.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    },
+    {
+      "src": "blob:https://www.bureautonalli.com/89c12e6a-b713-4a4f-a96a-52fbcd9e9a2a",
+      "poster": "https://framerusercontent.com/images/kf2WOACzQEvadHHplPvGKgpDXXA.jpeg?width=1280&height=1280",
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "rect": [
+        0,
+        7573.234375,
+        1440,
+        963.53125
+      ],
+      "objectFit": "cover"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        472,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        1426,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        2380,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        3334,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        4288,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        5242,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        6196,
+        10,
+        10
+      ]
+    },
+    {
+      "src": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "alt": "",
+      "nat": [
+        150,
+        150
+      ],
+      "rect": [
+        1400,
+        7150,
+        10,
+        10
+      ]
+    }
+  ],
+  "framerNames": [
+    {
+      "name": "Header",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        80
+      ],
+      "pos": "fixed"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        80
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Logo & Menu",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        81
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Logo",
+      "tag": "A",
+      "rect": [
+        0,
+        0,
+        271,
+        81
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Logo Animated",
+      "tag": "DIV",
+      "rect": [
+        30,
+        30,
+        211,
+        21
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Idle",
+      "tag": "DIV",
+      "rect": [
+        30,
+        30,
+        211,
+        21
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Logo_Contraction",
+      "tag": "DIV",
+      "rect": [
+        30,
+        30,
+        211,
+        21
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Logo_Expantion",
+      "tag": "DIV",
+      "rect": [
+        30,
+        30,
+        211,
+        21
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "MailTo",
+      "tag": "A",
+      "rect": [
+        1250,
+        1,
+        190,
+        78
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Idle",
+      "tag": "DIV",
+      "rect": [
+        1250,
+        1,
+        190,
+        78
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        1280,
+        31,
+        130,
+        18
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Square",
+      "tag": "DIV",
+      "rect": [
+        1317,
+        35,
+        11,
+        11
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Main",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        8532
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Hero",
+      "tag": "MAIN",
+      "rect": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Website Hero",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Spacer",
+      "tag": "DIV",
+      "rect": [
+        30,
+        30,
+        1390,
+        496
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Main",
+      "tag": "DIV",
+      "rect": [
+        30,
+        526,
+        1390,
+        354
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Studio",
+      "tag": "DIV",
+      "rect": [
+        30,
+        526,
+        348,
+        96
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "H1",
+      "tag": "DIV",
+      "rect": [
+        30,
+        526,
+        348,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "H1_Studio",
+      "tag": "DIV",
+      "rect": [
+        30,
+        526,
+        92,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Content",
+      "tag": "A",
+      "rect": [
+        30,
+        555,
+        250,
+        67
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        30,
+        555,
+        235,
+        67
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Expertise",
+      "tag": "DIV",
+      "rect": [
+        378,
+        526,
+        348,
+        97
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "H1",
+      "tag": "DIV",
+      "rect": [
+        378,
+        526,
+        348,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "H1_Expertise",
+      "tag": "DIV",
+      "rect": [
+        378,
+        526,
+        110,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        378,
+        555,
+        348,
+        68
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "A",
+      "rect": [
+        378,
+        555,
+        238,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        361,
+        555,
+        238,
+        17
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "rect": [
+        361,
+        557,
+        13,
+        13
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        378,
+        555,
+        220,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "A",
+      "rect": [
+        378,
+        572,
+        238,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        361,
+        572,
+        238,
+        17
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "rect": [
+        361,
+        574,
+        13,
+        13
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        378,
+        572,
+        220,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "A",
+      "rect": [
+        378,
+        589,
+        238,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        361,
+        589,
+        238,
+        17
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "rect": [
+        361,
+        591,
+        13,
+        13
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        378,
+        589,
+        220,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "A",
+      "rect": [
+        378,
+        606,
+        238,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        361,
+        606,
+        238,
+        17
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Arrow",
+      "tag": "DIV",
+      "rect": [
+        361,
+        608,
+        13,
+        13
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Text",
+      "tag": "DIV",
+      "rect": [
+        378,
+        606,
+        220,
+        17
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Spacer",
+      "tag": "DIV",
+      "rect": [
+        725,
+        526,
+        695,
+        354
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Featured",
+      "tag": "MAIN",
+      "rect": [
+        0,
+        900,
+        1440,
+        7632
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        900,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        900,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        27,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        27,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        452,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        452,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        453,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        453,
+        75,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        470,
+        227,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        486,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        452,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        452,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        452,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        472,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        1854,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        1854,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        981,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        981,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        1406,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        1406,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        1407,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        1407,
+        50,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        1424,
+        154,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        1440,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        1406,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        1406,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        1406,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        1426,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        2808,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        2808,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        1935,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        1935,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        2360,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        2360,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        2361,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        2361,
+        94,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        2378,
+        162,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        2394,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        2360,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        2360,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        2360,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        2380,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        3762,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        3762,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        2889,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        2889,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        3314,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        3314,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        3315,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        3315,
+        93,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        3332,
+        210,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        3348,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        3314,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        3314,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        3314,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        3334,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        4716,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        4716,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        3843,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        3843,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        4268,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        4268,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        4269,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        4269,
+        75,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        4286,
+        260,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        4302,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        4268,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        4268,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        4268,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        4288,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        5670,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        5670,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        4797,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        4797,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        5222,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        5222,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        5223,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        5223,
+        50,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        5240,
+        102,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        5256,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        5222,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        5222,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        5222,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        5242,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        6624,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        6624,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        5751,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        5751,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        6176,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        6176,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        6177,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        6177,
+        78,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        6194,
+        192,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        6210,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        6176,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        6176,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        6176,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        6196,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        0,
+        7578,
+        1440,
+        954
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Video",
+      "tag": "DIV",
+      "rect": [
+        0,
+        7578,
+        1440,
+        954
+      ],
+      "pos": "absolute"
+    },
+    {
+      "name": "Slide Range",
+      "tag": "DIV",
+      "rect": [
+        0,
+        6705,
+        1440,
+        2700
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info Sticky",
+      "tag": "DIV",
+      "rect": [
+        0,
+        6705,
+        1440,
+        900
+      ],
+      "pos": "sticky"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        0,
+        7130,
+        1440,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "CTA",
+      "tag": "A",
+      "rect": [
+        30,
+        7130,
+        1390,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Info",
+      "tag": "DIV",
+      "rect": [
+        30,
+        7131,
+        1320,
+        47
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Client",
+      "tag": "DIV",
+      "rect": [
+        30,
+        7131,
+        52,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Project",
+      "tag": "DIV",
+      "rect": [
+        30,
+        7148,
+        236,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Year",
+      "tag": "DIV",
+      "rect": [
+        30,
+        7164,
+        27,
+        14
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "ViewCase",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        7130,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Desktop",
+      "tag": "DIV",
+      "rect": [
+        1350,
+        7130,
+        70,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Icon",
+      "tag": "DIV",
+      "rect": [
+        1390,
+        7130,
+        30,
+        50
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Cross",
+      "tag": "DIV",
+      "rect": [
+        1400,
+        7150,
+        10,
+        10
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Navigation",
+      "tag": "HEADER",
+      "rect": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "pos": "fixed"
+    },
+    {
+      "name": "Variant 1",
+      "tag": "DIV",
+      "rect": [
+        0,
+        839,
+        1440,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "3f",
+      "tag": "DIV",
+      "rect": [
+        30,
+        839,
+        348,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        30,
+        839,
+        348,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Projects",
+      "tag": "A",
+      "rect": [
+        30,
+        839,
+        74,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Spacer",
+      "tag": "DIV",
+      "rect": [
+        104,
+        839,
+        104,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Insights",
+      "tag": "A",
+      "rect": [
+        208,
+        839,
+        65,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Spacer",
+      "tag": "DIV",
+      "rect": [
+        273,
+        839,
+        104,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "7f",
+      "tag": "DIV",
+      "rect": [
+        378,
+        839,
+        811,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Wrapper",
+      "tag": "DIV",
+      "rect": [
+        378,
+        839,
+        52,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Studio",
+      "tag": "A",
+      "rect": [
+        378,
+        839,
+        52,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "2f",
+      "tag": "DIV",
+      "rect": [
+        1188,
+        839,
+        232,
+        51
+      ],
+      "pos": "relative"
+    },
+    {
+      "name": "Paris Time",
+      "tag": "DIV",
+      "rect": [
+        1325,
+        839,
+        96,
+        51
+      ],
+      "pos": "relative"
+    }
+  ],
+  "appear": 6,
+  "sticky": [
+    {
+      "name": "Header",
+      "pos": "fixed",
+      "top": "0px",
+      "z": "10",
+      "rect": [
+        0,
+        0,
+        1440,
+        80,
+        0,
+        1440,
+        80,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        27,
+        1440,
+        900,
+        27,
+        1440,
+        927,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        981,
+        1440,
+        900,
+        981,
+        1440,
+        1881,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        1935,
+        1440,
+        900,
+        1935,
+        1440,
+        2835,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        2889,
+        1440,
+        900,
+        2889,
+        1440,
+        3789,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        3843,
+        1440,
+        900,
+        3843,
+        1440,
+        4743,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        4797,
+        1440,
+        900,
+        4797,
+        1440,
+        5697,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        5751,
+        1440,
+        900,
+        5751,
+        1440,
+        6651,
+        0
+      ]
+    },
+    {
+      "name": "Info Sticky",
+      "pos": "sticky",
+      "top": "0px",
+      "z": "2",
+      "rect": [
+        0,
+        6705,
+        1440,
+        900,
+        6705,
+        1440,
+        7605,
+        0
+      ]
+    },
+    {
+      "name": "Navigation",
+      "pos": "fixed",
+      "top": "0px",
+      "z": "10",
+      "rect": [
+        0,
+        0,
+        1440,
+        900,
+        0,
+        1440,
+        900,
+        0
+      ]
+    },
+    {
+      "name": null,
+      "pos": "fixed",
+      "top": "0px",
+      "z": "2147483647",
+      "rect": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Let's Talk",
+      "href": "mailto:dream@bureautonalli.com"
+    },
+    {
+      "text": "Independent creative CGI studio in Paris. Creative direction and visual storytel",
+      "href": "./studio"
+    },
+    {
+      "text": "Campaign Strategy & Creative Direction",
+      "href": "./projects/expertise/campaigns"
+    },
+    {
+      "text": "Visual Content & Short Film",
+      "href": "./projects/expertise/visual-content"
+    },
+    {
+      "text": "Object & Spatial Design",
+      "href": "./projects/expertise/objects-spaces"
+    },
+    {
+      "text": "AI-powered Creation & Innovation",
+      "href": "./projects/expertise/ai"
+    },
+    {
+      "text": "YSL BeautyLibre Berry Crush Digital Capsule2026View",
+      "href": "./projects/libre-berry-crush-digital-capsule"
+    },
+    {
+      "text": "Miu MiuMiutine Digital Capsule2025View",
+      "href": "./projects/miutine-digital-capsule"
+    },
+    {
+      "text": "Ralph LaurenPolo 67 Digital Campaign2026View",
+      "href": "./projects/polo-67-digital-campaign"
+    },
+    {
+      "text": "Louis VuittonHigh Jewellery CGI Exploration2025View",
+      "href": "./projects/high-jewellery-cgi-exploration"
+    },
+    {
+      "text": "YSL BeautyVanilla Couture Product Development2025View",
+      "href": "./projects/vanilla-couture-product-development"
+    },
+    {
+      "text": "AZZAROElixir Campaign2025View",
+      "href": "./projects/elixir-campaign"
+    },
+    {
+      "text": "BALENCIAGAProduction for E-commerce2024View",
+      "href": "./projects/production-for-e-commerce"
+    },
+    {
+      "text": "L'OréalAbsolut Repair Molecular Oil FOOH2025View",
+      "href": "./projects/absolut-repair-molecular-oil-fooh"
+    },
+    {
+      "text": "Projects\n    .rolling-text-inner-r16 {\n      --font-size: 14px;\n      --text: rg",
+      "href": "./projects"
+    },
+    {
+      "text": "Insights\n    .rolling-text-inner-r18 {\n      --font-size: 14px;\n      --text: rg",
+      "href": "./insights"
+    },
+    {
+      "text": "Studio\n    .rolling-text-inner-r1a {\n      --font-size: 14px;\n      --text: rgb(",
+      "href": "./studio"
+    }
+  ],
+  "text": "LET'S TALK\nWHO WE ARE\nIndependent creative CGI studio in Paris. Creative direction and visual storytelling rooted in intention. A dialogue between form, light, and meaning…\nOUR EXPERTISE\nCampaign Strategy & Creative Direction\nVisual Content & Short Film\nObject & Spatial Design\nAI-powered Creation & Innovation\n\nYSL BEAUTY\n\nLIBRE BERRY CRUSH DIGITAL CAPSULE\n\n2026\n\nVIEW\n\nMIU MIU\n\nMIUTINE DIGITAL CAPSULE\n\n2025\n\nVIEW\n\nRALPH LAUREN\n\nPOLO 67 DIGITAL CAMPAIGN\n\n2026\n\nVIEW\n\nLOUIS VUITTON\n\nHIGH JEWELLERY CGI EXPLORATION\n\n2025\n\nVIEW\n\nYSL BEAUTY\n\nVANILLA COUTURE PRODUCT DEVELOPMENT\n\n2025\n\nVIEW\n\nAZZARO\n\nELIXIR CAMPAIGN\n\n2025\n\nVIEW\n\nBALENCIAGA\n\nPRODUCTION FOR E-COMMERCE\n\n2024\n\nVIEW\n\nL'ORÉAL\n\nABSOLUT REPAIR MOLECULAR OIL FOOH\n\n2025\n\nVIEW\n\nP\nR\nO\nJ\nE\nC\nT\nS\nI\nN\nS\nI\nG\nH\nT\nS\nS\nT\nU\nD\nI\nO\n\nPARIS\n\n10:39",
+  "cursor": "auto",
+  "scripts": [
+    "https://events.framer.com/script?v=2",
+    "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/script_main.C5KMOsAq.mjs"
+  ],
+  "requests": [
+    {
+      "url": "https://www.bureautonalli.com/",
+      "type": "document"
+    },
+    {
+      "url": "https://framerusercontent.com/images/oVzArxiicLBgf9OtWvP6r0B83iE.jpeg?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/UIGbGhOdkurxE8CJ2Q5qPZ34cA.webp?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/8ffkKdHpwMQoCDsTGmPfmYUicac.svg?width=14&height=14",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/KWiTy1eFX7NAgtIkLg7rmyL8kOs.webp?width=1024&height=1280",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/mt0yvQJlIK4WfTxZYZ7DYovCwg.jpg?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/viPJBD38OjLziA2FYgGlYIRSVyA.jpg?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/DIAkGR7pyYHahrdqXZ7MGc09YU.webp?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/4CCJyZQyn7VUycWrRBdUmA3drwo.jpeg?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/yEl1Oyo8dnCjMmPtWRwT5GL2vAs.jpeg?width=1280&height=720",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/images/kf2WOACzQEvadHHplPvGKgpDXXA.jpeg?width=1280&height=1280",
+      "type": "image"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/react.5Q5FFyVr.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/rolldown-runtime.OA-FSkXT.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/motion.DurlQwd0.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/framer.DJT-NWd0.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/default-utils.js@_0.45.h0OPSrDk.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/v_pCFwrQo.BWSndRkl.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/YboPVIgZ3ZM2URdvDdu8rNg02O8I4r6KnJ9v2_OaMKY.BhoxQAg7.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/hls.DLoHW9NH.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/abYY4HswS.Cvd_7qNB.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/aZ7pivy6a.1vdfFp91.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/pGx0gKDHS.DIwzI48v.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/D_wY84xXq.BP5i4VGm.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/sites/8S3gyCXcRhfKiPZNiYnJq/script_main.C5KMOsAq.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/BMflKfD54Hm4rewb0TWvnw7w.woff2",
+      "type": "font"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/o2p1JXDxFWBjiN0u1GqCVDOr7ZM.woff2",
+      "type": "font"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/LDLaXh5YKXh1PHSYnzECffhzKDA.woff2",
+      "type": "font"
+    },
+    {
+      "url": "https://bureautonalli.b-cdn.net/Splash_L.mp4",
+      "type": "media"
+    },
+    {
+      "url": "https://framer.com/edit/init.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/cVaicKS1RjE7WFm0YRI6xFkPKmk.json",
+      "type": "fetch"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/ymhpgvb3WVd1OzXf2pdrBeG8.json",
+      "type": "fetch"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://app.framerstatic.com/chunk-KQPX4FTW.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/67ff80a3-4d44-4cd4-bf15-2223c454c542/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://framerusercontent.com/images/UnWb7w1jheMQSllNXVlU8LBcFQ.png",
+      "type": "other"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/53ce99b9-98f3-428e-bbeb-66c4a1067a1c/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/playlist.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/67ff80a3-4d44-4cd4-bf15-2223c454c542/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/53ce99b9-98f3-428e-bbeb-66c4a1067a1c/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/67ff80a3-4d44-4cd4-bf15-2223c454c542/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://framer.com/edit?framerSiteId=1a54247f77a8ad85bc5d4547bf556e0410415a8b20712102583b6f3f5ac1f863&source=www.bureautonalli.com&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1789634324101",
+      "type": "document"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/53ce99b9-98f3-428e-bbeb-66c4a1067a1c/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://framer.com/bootstrap.560da9591a7cea4040d019606b76c9db3a5820e0.js",
+      "type": "script"
+    },
+    {
+      "url": "https://app.framerstatic.com/chunk-6W2K2MOG.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://app.framerstatic.com/chunk-YRQ7G4QH.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://app.framerstatic.com/chunk-WOEOGJ2W.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://app.framerstatic.com/chunk-WLHSDIGQ.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://app.framerstatic.com/editorbar.TKCHTTA5.mjs",
+      "type": "script"
+    },
+    {
+      "url": "https://api.framer.com/auth/web/access-token?source=editorbar",
+      "type": "fetch"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/67ff80a3-4d44-4cd4-bf15-2223c454c542/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/53ce99b9-98f3-428e-bbeb-66c4a1067a1c/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1440p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/17704a69-7889-4b02-b6da-42e60b0fb2e5/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1440p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/d4089eb7-ea2f-45d2-b43b-84e950696019/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1440p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video3.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/0714f32d-4092-4740-ac39-015fdde70b84/1080p/video3.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/2c302fdc-cafb-4c03-b25b-03726b86cef0/1080p/video3.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/b5a1c6d2-1242-4a76-8204-f94e61868931/1440p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video4.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/7df9df68-24f8-4179-b7b8-14f955d5911e/1080p/video5.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video.m3u8",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video0.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video1.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video2.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video3.ts",
+      "type": "xhr"
+    },
+    {
+      "url": "https://vz-0fcbb9c7-3ea.b-cdn.net/36929164-fdd1-4e0a-8f01-62d90712c3e4/1080p/video4.ts",
+      "type": "xhr"
+    }
+  ]
+}
