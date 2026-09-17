@@ -3,7 +3,7 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { StudioLights, useReducedMotion } from "./shared";
+import { StudioLights, useReducedMotion, type SceneFrameloop } from "./shared";
 
 const PROFILE_KEYS: [number, number][] = [
   [0.07, -1.32],
@@ -76,6 +76,8 @@ function Pod() {
 
   const scale = THREE.MathUtils.clamp(aspect * 0.75, 0.55, 0.9);
   const baseY = aspect < 1 ? 0.55 : 0.1;
+  // Desktop: offset right so the headline column stays clear.
+  const baseX = aspect > 1.2 ? Math.min(1.25, (aspect - 1) * 1.6) : 0;
 
   useFrame((state, delta) => {
     const g = group.current;
@@ -90,7 +92,7 @@ function Pod() {
   });
 
   return (
-    <group ref={group} position={[0, baseY, 0]} scale={scale}>
+    <group ref={group} position={[baseX, baseY, 0]} scale={scale}>
       <mesh geometry={geometry} material={material} />
       <Crown material={material} />
       <mesh material={material} position={[0, -2.95, 0]}>
@@ -100,10 +102,10 @@ function Pod() {
   );
 }
 
-export default function PoppyPodScene({ active }: { active: boolean }) {
+export default function PoppyPodScene({ frameloop }: { frameloop: SceneFrameloop }) {
   return (
     <Canvas
-      frameloop={active ? "always" : "never"}
+      frameloop={frameloop}
       dpr={[1, 1.5]}
       camera={{ position: [0, 0.3, 5.6], fov: 30 }}
       gl={{ antialias: true }}

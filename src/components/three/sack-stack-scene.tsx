@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
-import { StudioLights, createRandom, useReducedMotion } from "./shared";
+import { StudioLights, createRandom, useReducedMotion, type SceneFrameloop } from "./shared";
 
 function createJuteTexture() {
   const size = 256;
@@ -156,10 +156,10 @@ function Stack() {
   );
 }
 
-export default function SackStackScene({ active }: { active: boolean }) {
+export default function SackStackScene({ frameloop }: { frameloop: SceneFrameloop }) {
   return (
     <Canvas
-      frameloop={active ? "always" : "never"}
+      frameloop={frameloop}
       dpr={[1, 1.5]}
       camera={{ position: [0, 1.0, 6.4], fov: 30 }}
       gl={{ antialias: true }}

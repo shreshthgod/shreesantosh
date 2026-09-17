@@ -2,28 +2,34 @@ import { siteConfig } from "@/data/site-config";
 import { products } from "@/data/products";
 import { RollingText } from "@/components/rolling-text";
 import { LiveClock } from "@/components/live-clock";
+import { SectionLink } from "@/components/section-link";
 import { Wordmark } from "@/components/tonalli-icons";
 
 export function SiteFooter() {
   return (
-    <footer className="overflow-hidden bg-black pb-8 pt-[120px] text-white lg:pb-[80px]">
-      <div className="grid grid-cols-2 gap-y-12 px-5 lg:grid-cols-[348px_348px_348px_1fr] lg:px-[30px]">
-        <div>
-          <p className="text-xs font-bold uppercase leading-[14.4px]">Navigate</p>
-          <ul className="mt-4 space-y-[2px] text-xs uppercase leading-[16.8px]">
+    <footer data-page-layer="" className="dark overflow-hidden bg-background pb-28 pt-24 text-foreground lg:pb-20 lg:pt-30">
+      <div className="grid grid-cols-1 gap-y-10 px-(--gutter) sm:grid-cols-2 lg:grid-cols-[var(--col-label)_var(--col-label)_var(--col-label)_1fr]">
+        <nav aria-labelledby="footer-nav-title">
+          <p id="footer-nav-title" className="text-label font-bold uppercase">
+            Navigate
+          </p>
+          <ul className="mt-3">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="group/roll inline-block text-white/70 transition-colors hover:text-white">
+                <SectionLink
+                  href={item.href as `#${string}`}
+                  className="group/roll flex min-h-11 items-center text-ui uppercase text-muted-foreground transition-colors duration-200 hover:text-foreground lg:min-h-8"
+                >
                   <RollingText text={item.label} />
-                </a>
+                </SectionLink>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
         <div>
-          <p className="text-xs font-bold uppercase leading-[14.4px]">Grades</p>
-          <ul className="mt-4 space-y-[2px] text-xs uppercase leading-[16.8px] text-white/70">
+          <p className="text-label font-bold uppercase">Grades</p>
+          <ul className="mt-3 space-y-2 text-ui uppercase text-muted-foreground">
             {products.map((p) => (
               <li key={p.id}>{p.name}</li>
             ))}
@@ -31,8 +37,8 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-bold uppercase leading-[14.4px]">Contact</p>
-          <ul className="mt-4 space-y-[2px] text-xs uppercase leading-[16.8px] text-white/70">
+          <p className="text-label font-bold uppercase">Contact</p>
+          <ul className="mt-3 space-y-2 break-words text-ui text-muted-foreground">
             <li>{siteConfig.contact.phone}</li>
             <li>{siteConfig.contact.email}</li>
             <li>{siteConfig.contact.address}</li>
@@ -40,20 +46,20 @@ export function SiteFooter() {
         </div>
 
         <div className="lg:text-right">
-          <p className="text-xs font-bold uppercase leading-[14.4px]">India</p>
-          <LiveClock className="mt-4 block text-xs uppercase leading-[16.8px] text-white/70" />
+          <p className="text-label font-bold uppercase">India</p>
+          <LiveClock className="mt-3 block text-ui tabular-nums text-muted-foreground" />
         </div>
       </div>
 
-      <a href="#home" aria-label="Back to top" className="group/logo mt-[120px] block whitespace-nowrap px-5 lg:px-[30px]">
+      <SectionLink href="#home" aria-label="Back to top" className="group/logo mt-24 block whitespace-nowrap px-(--gutter) lg:mt-30">
         <Wordmark className="text-[15vw] leading-[0.8] tracking-[-0.02em] group-hover/logo:tracking-[-0.06em]" />
-      </a>
+      </SectionLink>
 
-      <div className="mt-10 flex flex-col justify-between gap-2 px-5 pr-24 text-xs uppercase leading-[14.4px] text-white/45 sm:flex-row lg:pl-[30px] lg:pr-[110px]">
+      <div className="mt-10 flex flex-col justify-between gap-2 px-(--gutter) text-label uppercase text-muted-foreground sm:flex-row lg:pr-28">
         <p>
           © {new Date().getFullYear()} {siteConfig.name}
         </p>
-        <p>{siteConfig.product} — Bulk &amp; export supply</p>
+        <p>{siteConfig.product} — bulk &amp; export supply</p>
       </div>
     </footer>
   );

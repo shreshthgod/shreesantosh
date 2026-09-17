@@ -3,7 +3,7 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { StudioLights, createRandom, createSeedGeometry, useReducedMotion } from "./shared";
+import { StudioLights, createRandom, createSeedGeometry, useReducedMotion, type SceneFrameloop } from "./shared";
 
 export type SeedFieldVariant = "cool" | "warm" | "white" | "pile";
 
@@ -27,7 +27,7 @@ interface VariantConfig {
 const VARIANTS: Record<SeedFieldVariant, VariantConfig> = {
   cool: { seed: "#c9bda4", bg: "#0b0c0e", key: "#e6eeff", light: 0.9, count: 4200, radius: 1.1, height: 0.22, size: 0.028, camera: [0, 0.95, 0.95], target: [0, 0.05, -0.15], fov: 26, orbit: false, randomSeed: 101 },
   warm: { seed: "#c4a97f", bg: "#170f08", key: "#ffb46b", light: 1, count: 4200, radius: 1.1, height: 0.22, size: 0.028, camera: [0.15, 0.9, 1.0], target: [0, 0.05, -0.15], fov: 26, orbit: false, randomSeed: 202 },
-  white: { seed: "#f1eee6", bg: "#f1eee8", key: "#ffffff", light: 0.7, count: 4200, radius: 1.1, height: 0.22, size: 0.028, camera: [0, 0.95, 0.95], target: [0, 0.05, -0.15], fov: 26, orbit: false, randomSeed: 303 },
+  white: { seed: "#f7f4ee", bg: "#cfc9bd", key: "#ffffff", light: 0.95, count: 4200, radius: 1.1, height: 0.22, size: 0.028, camera: [0, 0.95, 0.95], target: [0, 0.05, -0.15], fov: 26, orbit: false, randomSeed: 303 },
   pile: { seed: "#b8a78a", bg: "#131313", key: "#f2f2f2", light: 1, count: 3600, radius: 0.95, height: 0.75, size: 0.026, camera: [0, 1.1, 3.1], target: [0, 0.25, 0], fov: 28, orbit: true, randomSeed: 404 },
 };
 
@@ -91,17 +91,17 @@ function CameraRig({ config }: { config: VariantConfig }) {
   return null;
 }
 
-export default function SeedFieldScene({ variant, active }: { variant: SeedFieldVariant; active: boolean }) {
+export default function SeedFieldScene({ variant, frameloop }: { variant: SeedFieldVariant; frameloop: SceneFrameloop }) {
   const config = VARIANTS[variant];
   return (
     <Canvas
-      frameloop={active ? "always" : "never"}
+      frameloop={frameloop}
       dpr={[1, 1.5]}
       camera={{ position: config.camera, fov: config.fov, near: 0.05, far: 20 }}
       gl={{ antialias: true }}
     >
       <color attach="background" args={[config.bg]} />
-      <fog attach="fog" args={[config.bg, config.orbit ? 3.2 : 1.1, config.orbit ? 6.5 : 2.6]} />
+      <fog attach="fog" args={[config.bg, config.orbit ? 3.2 : 1.6, config.orbit ? 6.5 : 3.4]} />
       <StudioLights keyColor={config.key} intensity={config.light} />
       <Seeds config={config} />
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 0]}>

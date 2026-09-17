@@ -3,7 +3,7 @@
 import { useLayoutEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { StudioLights, createRandom, createSeedGeometry, useReducedMotion } from "./shared";
+import { StudioLights, createRandom, createSeedGeometry, useReducedMotion, type SceneFrameloop } from "./shared";
 
 const STREAM_COUNT = 1400;
 const MOUND_COUNT = 2200;
@@ -121,11 +121,11 @@ function Rig() {
   return null;
 }
 
-export default function SeedStreamScene({ active }: { active: boolean }) {
+export default function SeedStreamScene({ frameloop }: { frameloop: SceneFrameloop }) {
   const geometry = useMemo(() => createSeedGeometry(), []);
   return (
     <Canvas
-      frameloop={active ? "always" : "never"}
+      frameloop={frameloop}
       dpr={[1, 1.5]}
       camera={{ position: [0, 0.15, 4.4], fov: 32 }}
       gl={{ antialias: true }}

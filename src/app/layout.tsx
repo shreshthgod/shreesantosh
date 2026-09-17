@@ -33,6 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jost.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-(--gutter) focus:top-3 focus:z-[60] focus:bg-background focus:px-4 focus:py-3 focus:text-ui focus:font-medium focus:uppercase focus:text-foreground"
+        >
+          Skip to content
+        </a>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

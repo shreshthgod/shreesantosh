@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <EnquiryProvider>
       <SiteHeader />
-      <main className="bg-black">
+      <main id="main" tabIndex={-1} data-page-layer="" className="bg-black">
         <Hero />
         <Showcase />
         <WhyUs />

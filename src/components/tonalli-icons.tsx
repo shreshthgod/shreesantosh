@@ -20,7 +20,7 @@ export function Wordmark({ className, monogram = false }: { className?: string; 
   return (
     <span
       className={cn(
-        "inline-block font-wordmark font-light uppercase leading-none tracking-[0] transition-[letter-spacing] duration-500 ease-tonalli",
+        "inline-block font-wordmark font-light uppercase leading-none tracking-[0] transition-[letter-spacing] duration-300 ease-tonalli",
         className
       )}
     >

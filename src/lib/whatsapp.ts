@@ -60,25 +60,25 @@ export function validateEnquiryForm(formData: EnquiryFormData): {
   const errors: EnquiryFormErrors = {};
 
   if (!formData.name?.trim()) {
-    errors.name = "Name is required";
+    errors.name = "Enter your name so we know who to reply to.";
   }
 
   if (!formData.phone?.trim()) {
-    errors.phone = "Phone number is required";
-  } else if (!/^[\d\s\-+()]{10,}$/.test(formData.phone)) {
-    errors.phone = "Please enter a valid phone number";
+    errors.phone = "Enter a phone number so we can reach you.";
+  } else if (formData.phone.replace(/\D/g, "").length < 10 || !/^[\d\s\-+()]+$/.test(formData.phone)) {
+    errors.phone = "Use at least 10 digits, e.g. +91 98765 43210.";
   }
 
   if (!formData.grade) {
-    errors.grade = "Please select a grade";
+    errors.grade = "Choose a grade, or pick “Not sure”.";
   }
 
   if (!formData.quantity) {
-    errors.quantity = "Please select quantity";
+    errors.quantity = "Choose a quantity, or pick “Custom quantity”.";
   }
 
   if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    errors.email = "Please enter a valid email address";
+    errors.email = "Enter a full email address, e.g. name@company.com.";
   }
 
   return {

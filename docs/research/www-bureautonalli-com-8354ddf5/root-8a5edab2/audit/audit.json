@@ -1,0 +1,193 @@
+[
+  {
+    "label": "desktop",
+    "pageErrors": [],
+    "axe": [],
+    "metrics": {
+      "htmlClass": "lenis on",
+      "canvases": 0,
+      "smallTargets": [
+        "a \"Skip to content\" 1x1",
+        "a \"King — Super Fine\" 348x32",
+        "a \"Shubh Laxmi — Super Fine\" 348x32",
+        "a \"Shri — Super Fine\" 348x32",
+        "a \"White Tinopal — Super Fine\" 348x32",
+        "a \"HomeHome\" 348x32",
+        "a \"AboutAbout\" 348x32",
+        "a \"GradesGrades\" 348x32",
+        "a \"PackagingPackaging\" 348x32",
+        "a \"ProcessProcess\" 348x32",
+        "a \"UsesUses\" 348x32",
+        "a \"ContactContact\" 348x32"
+      ],
+      "textSizes": {
+        "16px": 38,
+        "26px": 1,
+        "14px": 80,
+        "76px": 1,
+        "12px": 61,
+        "48px": 7,
+        "18px": 2,
+        "216px": 1
+      },
+      "smallBody": [
+        "p#phone-helper \"Include your country code. We \" 14px",
+        "p#quantity-helper \"Standard supply is in 25 KG an\" 14px"
+      ],
+      "smallBodyCount": 2,
+      "inputsUnder16": 0,
+      "headings": [
+        "H1 Quality-graded poppy seeds, supplied in bulk.",
+        "H2 Who we are",
+        "H2 Our grades",
+        "H2 King",
+        "H2 Shubh Laxmi",
+        "H2 Shri",
+        "H2 White Tinopal",
+        "H2 Bulk packaging",
+        "H2 Farm to export",
+        "H2 A supply process built for buyers who cannot affor",
+        "H3 Quality-based selection",
+        "H3 Multiple pack options",
+        "H3 Farmer sourcing",
+        "H3 Cleaning & sorting",
+        "H3 Bulk supply",
+        "H3 Export supply",
+        "H2 Bulk sacks. Retail packs. Built to order.",
+        "H3 Standard — always available",
+        "H3 On demand",
+        "H3 Custom requirement",
+        "H2 From farmer to final grade, in six controlled stag",
+        "H3 Stage 1: Purchase",
+        "H3 Stage 2: Transport to factory",
+        "H3 Stage 3: Cleaning",
+        "H3 Stage 4: Sorting",
+        "H3 Stage 5: Quality grading",
+        "H3 Stage 6: Export",
+        "H2 One seed, a wide table of applications.",
+        "H3 Gravies & curries",
+        "H3 Bengali posto",
+        "H3 Sweets & desserts",
+        "H3 Regional snacks",
+        "H2 Tell us what you need.",
+        "H3 Contact directly"
+      ],
+      "skipLink": true,
+      "buttonCursors": [
+        "pointer"
+      ]
+    },
+    "focusReport": [
+      "a \"Skip to content\" indicator=outline 2px solid",
+      "a \"Shrisantosh\" indicator=outline 2px solid",
+      "a \"Enquire NowEnquire Now\" indicator=outline 2px solid",
+      "a \"About our supplyAbout ou\" indicator=outline 2px solid",
+      "a \"King — Super Fine\" indicator=outline 2px solid",
+      "a \"Shubh Laxmi — Super Fine\" indicator=outline 2px solid",
+      "a \"Shri — Super Fine\" indicator=outline 2px solid",
+      "a \"White Tinopal — Super Fi\" indicator=outline 2px solid",
+      "a \"Request a quoteRequest a\" indicator=outline 2px solid",
+      "a \"Explore Our GradesExplor\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"ViewView\" indicator=outline 2px solid",
+      "a \"ViewView\" indicator=outline 2px solid",
+      "button \"25 KGStandard bulk sack\" indicator=outline 2px solid",
+      "button \"50 KGStandard bulk sack\" indicator=outline 2px solid"
+    ]
+  },
+  {
+    "label": "mobile",
+    "pageErrors": [],
+    "axe": [],
+    "metrics": {
+      "htmlClass": "lenis on",
+      "canvases": 0,
+      "smallTargets": [
+        "a \"Skip to content\" 1x1"
+      ],
+      "textSizes": {
+        "16px": 30,
+        "26px": 1,
+        "14px": 79,
+        "36px": 1,
+        "12px": 61,
+        "28px": 7,
+        "18px": 2,
+        "56.25px": 1
+      },
+      "smallBody": [
+        "p#phone-helper \"Include your country code. We \" 14px",
+        "p#quantity-helper \"Standard supply is in 25 KG an\" 14px"
+      ],
+      "smallBodyCount": 2,
+      "inputsUnder16": 0,
+      "headings": [
+        "H1 Quality-graded poppy seeds, supplied in bulk.",
+        "H2 Who we are",
+        "H2 Our grades",
+        "H2 King",
+        "H2 Shubh Laxmi",
+        "H2 Shri",
+        "H2 White Tinopal",
+        "H2 Bulk packaging",
+        "H2 Farm to export",
+        "H2 A supply process built for buyers who cannot affor",
+        "H3 Quality-based selection",
+        "H3 Multiple pack options",
+        "H3 Farmer sourcing",
+        "H3 Cleaning & sorting",
+        "H3 Bulk supply",
+        "H3 Export supply",
+        "H2 Bulk sacks. Retail packs. Built to order.",
+        "H3 Standard — always available",
+        "H3 On demand",
+        "H3 Custom requirement",
+        "H2 From farmer to final grade, in six controlled stag",
+        "H3 Stage 1: Purchase",
+        "H3 Stage 2: Transport to factory",
+        "H3 Stage 3: Cleaning",
+        "H3 Stage 4: Sorting",
+        "H3 Stage 5: Quality grading",
+        "H3 Stage 6: Export",
+        "H2 One seed, a wide table of applications.",
+        "H3 Gravies & curries",
+        "H3 Bengali posto",
+        "H3 Sweets & desserts",
+        "H3 Regional snacks",
+        "H2 Tell us what you need.",
+        "H3 Contact directly"
+      ],
+      "skipLink": true,
+      "buttonCursors": [
+        "pointer"
+      ]
+    },
+    "focusReport": [
+      "a \"Skip to content\" indicator=outline 2px solid",
+      "a \"Shrisantosh\" indicator=outline 2px solid",
+      "button \"MenuMenu\" indicator=outline 2px solid",
+      "a \"About our supplyAbout ou\" indicator=outline 2px solid",
+      "a \"Request a quoteRequest a\" indicator=outline 2px solid",
+      "a \"Explore Our GradesExplor\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"EnquireEnquire\" indicator=outline 2px solid",
+      "a \"ViewView\" indicator=outline 2px solid",
+      "a \"ViewView\" indicator=outline 2px solid",
+      "button \"25 KGStandard bulk sack\" indicator=outline 2px solid",
+      "button \"50 KGStandard bulk sack\" indicator=outline 2px solid",
+      "button \"50 GM\" indicator=outline 2px solid",
+      "button \"100 GM\" indicator=outline 2px solid",
+      "button \"200 GM\" indicator=outline 2px solid",
+      "button \"500 GM\" indicator=outline 2px solid"
+    ]
+  },
+  {
+    "label": "reduced-motion",
+    "lenis": "lenis on"
+  }
+]

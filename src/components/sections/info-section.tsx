@@ -17,19 +17,19 @@ export function InfoSection({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("border-t border-black/12 bg-white py-[120px] text-black", className)}>
-      <div className="grid grid-cols-1 gap-10 px-5 lg:grid-cols-[348px_1fr] lg:gap-0 lg:px-[30px]">
-        <Reveal className="flex items-start justify-between pr-[30px] lg:block">
-          <p className="text-sm font-medium uppercase leading-[14px]">{label}</p>
-          <p className="text-xs leading-[14.4px] text-black/50 lg:mt-[15px]">{index}</p>
+    <section id={id} aria-labelledby={`${id}-title`} className={cn("border-t border-border bg-background py-24 text-foreground lg:py-30", className)}>
+      <div className="grid grid-cols-1 gap-8 px-(--gutter) lg:grid-cols-[var(--col-label)_1fr] lg:gap-0">
+        <Reveal className="flex items-baseline justify-between lg:block lg:pr-8">
+          <p className="text-ui font-medium uppercase">{label}</p>
+          <p className="text-label tabular-nums text-muted-foreground lg:mt-3">{index}</p>
         </Reveal>
         <div>
-          <Reveal delay={60}>
-            <h2 className="max-w-[20ch] text-balance text-[clamp(28px,3.4vw,48px)] font-medium uppercase leading-[1.05] tracking-[-0.01em]">
+          <Reveal delay={40}>
+            <h2 id={`${id}-title`} className="max-w-[20ch] text-balance text-display font-medium uppercase tracking-[-0.01em]">
               {statement}
             </h2>
           </Reveal>
-          <div className="mt-16">{children}</div>
+          <div className="mt-12 lg:mt-16">{children}</div>
         </div>
       </div>
     </section>

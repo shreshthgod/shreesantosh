@@ -1,8 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import * as THREE from "three";
 import { Environment, Lightformer } from "@react-three/drei";
+
+export { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+export type SceneFrameloop = "always" | "demand" | "never";
 
 export function createRandom(seed: number) {
   let a = seed >>> 0;
@@ -30,20 +33,6 @@ export function createSeedGeometry() {
   }
   geometry.computeVertexNormals();
   return geometry;
-}
-
-function subscribeReducedMotion(onChange: () => void) {
-  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  mq.addEventListener("change", onChange);
-  return () => mq.removeEventListener("change", onChange);
-}
-
-export function useReducedMotion() {
-  return useSyncExternalStore(
-    subscribeReducedMotion,
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-    () => false
-  );
 }
 
 export function StudioLights({ keyColor = "#ffffff", intensity = 1 }: { keyColor?: string; intensity?: number }) {

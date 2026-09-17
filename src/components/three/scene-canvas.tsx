@@ -2,7 +2,10 @@
 
 import { Component, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useWebGLSupport } from "@/hooks/use-webgl-support";
 import { cn } from "@/lib/utils";
+import type { SceneFrameloop } from "./shared";
 
 const PoppyPodScene = dynamic(() => import("./poppy-pod-scene"), { ssr: false });
 const SeedFieldScene = dynamic(() => import("./seed-field-scene"), { ssr: false });
@@ -11,36 +14,35 @@ const SeedStreamScene = dynamic(() => import("./seed-stream-scene"), { ssr: fals
 
 export type SceneName = "pod" | "seeds-cool" | "seeds-warm" | "seeds-white" | "seeds-pile" | "sacks" | "stream";
 
-export const sceneBackground: Record<SceneName, string> = {
-  pod: "#050505",
-  "seeds-cool": "#0b0c0e",
-  "seeds-warm": "#170f08",
-  "seeds-white": "#f1eee8",
-  "seeds-pile": "#131313",
-  sacks: "#0e0d0b",
-  stream: "#000000",
+export const scenes: Record<SceneName, { background: string; tone: "dark" | "light" }> = {
+  pod: { background: "#050505", tone: "dark" },
+  "seeds-cool": { background: "#0b0c0e", tone: "dark" },
+  "seeds-warm": { background: "#170f08", tone: "dark" },
+  "seeds-white": { background: "#cfc9bd", tone: "light" },
+  "seeds-pile": { background: "#131313", tone: "dark" },
+  sacks: { background: "#0e0d0b", tone: "dark" },
+  stream: { background: "#000000", tone: "dark" },
 };
 
-function renderScene(name: SceneName, active: boolean) {
+function renderScene(name: SceneName, frameloop: SceneFrameloop) {
   switch (name) {
     case "pod":
-      return <PoppyPodScene active={active} />;
+      return <PoppyPodScene frameloop={frameloop} />;
     case "seeds-cool":
-      return <SeedFieldScene variant="cool" active={active} />;
+      return <SeedFieldScene variant="cool" frameloop={frameloop} />;
     case "seeds-warm":
-      return <SeedFieldScene variant="warm" active={active} />;
+      return <SeedFieldScene variant="warm" frameloop={frameloop} />;
     case "seeds-white":
-      return <SeedFieldScene variant="white" active={active} />;
+      return <SeedFieldScene variant="white" frameloop={frameloop} />;
     case "seeds-pile":
-      return <SeedFieldScene variant="pile" active={active} />;
+      return <SeedFieldScene variant="pile" frameloop={frameloop} />;
     case "sacks":
-      return <SackStackScene active={active} />;
+      return <SackStackScene frameloop={frameloop} />;
     case "stream":
-      return <SeedStreamScene active={active} />;
+      return <SeedStreamScene frameloop={frameloop} />;
   }
 }
 
-// Without WebGL the page must still work: fall back to the plain scene background.
 class SceneErrorBoundary extends Component<{ children: React.ReactNode }, { failed: boolean }> {
   state = { failed: false };
 
@@ -53,16 +55,18 @@ class SceneErrorBoundary extends Component<{ children: React.ReactNode }, { fail
   }
 }
 
-// Mount within one viewport of the screen (so scenes are warm when they arrive),
-// but only render frames while actually on screen.
+// Mount within one viewport of the screen (so scenes are warm when they arrive), render
+// frames only while on screen, and render a single still frame for reduced motion.
 export function SceneCanvas({ name, className }: { name: SceneName; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);
   const [visible, setVisible] = useState(false);
+  const supported = useWebGLSupport();
+  const reduced = useReducedMotion();
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || !supported) return;
     const nearObserver = new IntersectionObserver(([entry]) => setNear(entry.isIntersecting), {
       rootMargin: "100% 0px",
     });
@@ -73,11 +77,13 @@ export function SceneCanvas({ name, className }: { name: SceneName; className?: 
       nearObserver.disconnect();
       visibleObserver.disconnect();
     };
-  }, []);
+  }, [supported]);
+
+  const frameloop: SceneFrameloop = !visible ? "never" : reduced ? "demand" : "always";
 
   return (
-    <div ref={ref} aria-hidden="true" className={cn("absolute inset-0", className)} style={{ backgroundColor: sceneBackground[name] }}>
-      {near && <SceneErrorBoundary>{renderScene(name, visible)}</SceneErrorBoundary>}
+    <div ref={ref} aria-hidden="true" className={cn("absolute inset-0", className)} style={{ backgroundColor: scenes[name].background }}>
+      {supported && near && <SceneErrorBoundary>{renderScene(name, frameloop)}</SceneErrorBoundary>}
     </div>
   );
 }
