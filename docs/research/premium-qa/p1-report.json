@@ -1,0 +1,180 @@
+{
+  "widths": {
+    "320": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12871,
+      "smallTargets": [],
+      "problems": []
+    },
+    "360": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12505,
+      "smallTargets": [],
+      "problems": []
+    },
+    "375": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12310,
+      "smallTargets": [],
+      "axe": [],
+      "problems": []
+    },
+    "390": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12317,
+      "smallTargets": [],
+      "problems": []
+    },
+    "414": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40.728px",
+      "h2": "38px",
+      "pageHeight": 12271,
+      "smallTargets": [],
+      "problems": []
+    },
+    "480": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "44.16px",
+      "h2": "38px",
+      "pageHeight": 11941,
+      "smallTargets": [],
+      "problems": []
+    },
+    "768": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "59.136px",
+      "h2": "45.472px",
+      "pageHeight": 10636,
+      "smallTargets": [],
+      "problems": []
+    },
+    "820": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "61.84px",
+      "h2": "46.98px",
+      "pageHeight": 10676,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1024": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "72.448px",
+      "h2": "52.896px",
+      "pageHeight": 9894,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1280": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "85.76px",
+      "h2": "60.32px",
+      "pageHeight": 10041,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1440": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "94.08px",
+      "h2": "64px",
+      "pageHeight": 10243,
+      "smallTargets": [],
+      "axe": [],
+      "problems": []
+    },
+    "1920": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "96px",
+      "h2": "64px",
+      "pageHeight": 10259,
+      "smallTargets": [],
+      "problems": []
+    }
+  },
+  "headerTop": "rgba(0, 0, 0, 0)",
+  "headerScrolled": "oklab(0.956536 0.00166348 0.0171149 / 0.85)",
+  "gradeKeyboard": {
+    "selected": "04White Tinopal",
+    "focused": "04White Tinopal"
+  },
+  "process@0.02": {
+    "bg": "rgb(221, 231, 217)",
+    "current": "01PurchaseProcurement from far"
+  },
+  "process@0.5": {
+    "bg": "rgb(201, 216, 196)",
+    "current": "03CleaningMulti-stage cleaning"
+  },
+  "process@0.95": {
+    "bg": "rgb(18, 55, 42)",
+    "current": "06ExportPrepared product packe"
+  },
+  "formInvalid": {
+    "summary": "Please check 4 fields: Name, Phone, Required grade, Quantity.",
+    "focused": "name"
+  },
+  "formState": "Your enquiry is ready to shareOnline sending isn't connected yet. Copy your details to sha",
+  "mobileSwipe": "02Shubh Laxmi",
+  "mobileUseTap": "true",
+  "mobileFieldCovered": {
+    "headerBottom": 73,
+    "fieldTop": 389,
+    "covered": false
+  }
+}

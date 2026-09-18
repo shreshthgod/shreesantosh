@@ -1,147 +1,153 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useLenis } from "lenis/react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
-import { RollingText } from "@/components/rolling-text";
-import { SectionLink } from "@/components/section-link";
-import { Wordmark } from "@/components/tonalli-icons";
 import { useActiveSection } from "@/hooks/use-active-section";
+import { ButtonLink } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export const primaryNav = [
-  { label: "Grades", href: "#grades" },
-  { label: "Packaging", href: "#packaging" },
-  { label: "Process", href: "#process" },
-  { label: "Uses", href: "#uses" },
-  { label: "Contact", href: "#contact" },
-] as const;
+const sectionIds = siteConfig.nav.map((item) => item.href.slice(1)).filter((id) => id !== "home");
 
-const sectionIds = primaryNav.map((item) => item.href.slice(1));
+export function Wordmark({ className, compact = false }: { className?: string; compact?: boolean }) {
+  return (
+    <span className={cn("flex flex-col leading-none", className)}>
+      <span className={cn("font-serif font-semibold uppercase tracking-[0.08em]", compact ? "text-xl" : "text-[1.15rem] min-[375px]:text-[1.3rem] sm:text-[1.4rem]")}>Shrisantosh</span>
+      <span className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.42em] opacity-80">Traders</span>
+    </span>
+  );
+}
 
 export function SiteHeader() {
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const lenis = useLenis();
   const active = useActiveSection(sectionIds);
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const firstLinkRef = useRef<HTMLAnchorElement>(null);
-  const wasOpen = useRef(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (open) lenis?.stop();
-    else lenis?.start();
-
-    // Everything behind the dialog becomes inert, which also traps focus inside it.
-    document.querySelectorAll<HTMLElement>("[data-page-layer]").forEach((el) => {
-      el.inert = open;
-    });
-
-    if (open) {
-      firstLinkRef.current?.focus();
-    } else if (wasOpen.current) {
-      triggerRef.current?.focus();
-    }
-    wasOpen.current = open;
-  }, [open, lenis]);
+    const node = sentinelRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(([entry]) => setScrolled(!entry.isIntersecting));
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
+    if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
     };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
-  useEffect(() => {
+    const onPointer = (e: PointerEvent) => {
+      const target = e.target as Node;
+      if (!panelRef.current?.contains(target) && !buttonRef.current?.contains(target)) setOpen(false);
+    };
     const desktop = window.matchMedia("(min-width: 1024px)");
-    const close = () => desktop.matches && setOpen(false);
-    desktop.addEventListener("change", close);
-    return () => desktop.removeEventListener("change", close);
-  }, []);
+    const onResize = () => desktop.matches && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("pointerdown", onPointer);
+    desktop.addEventListener("change", onResize);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onPointer);
+      desktop.removeEventListener("change", onResize);
+    };
+  }, [open]);
+
+  const solid = scrolled || open;
+  const close = () => setOpen(false);
 
   return (
     <>
+      <div ref={sentinelRef} aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-24 w-px" />
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 h-(--header-h)",
-          open ? "text-black" : "text-white mix-blend-difference"
+          "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,color,backdrop-filter] duration-(--dur-premium) ease-(--ease-premium)",
+          solid ? "border-forest/10 bg-cream/95 text-forest backdrop-blur-md" : "on-dark border-transparent bg-transparent text-cream"
         )}
       >
-        <div className="flex h-full items-start justify-between px-(--gutter) pt-[18px]">
-          <SectionLink
-            href="#home"
-            onNavigate={() => setOpen(false)}
-            aria-label={`${siteConfig.name} — back to top`}
-            className="group/logo flex h-11 items-center"
-          >
-            <Wordmark monogram={open} className="text-[1.625rem] leading-none group-hover/logo:tracking-[-0.06em]" />
-          </SectionLink>
+        <div className="container-page flex h-(--header-h) items-center justify-between gap-6">
+          <a href="#home" className="flex h-11 items-center" aria-label={`${siteConfig.name} — home`}>
+            <Wordmark />
+          </a>
 
-          <SectionLink
-            href="#contact"
-            className="group/roll hidden h-11 items-center gap-1.5 text-ui font-medium uppercase lg:flex"
-          >
-            <span
-              aria-hidden="true"
-              className="block size-[11px] bg-current transition-transform duration-300 ease-tonalli group-hover/roll:-translate-x-10 group-focus-visible/roll:-translate-x-10"
-            />
-            <RollingText text={siteConfig.cta.primary} />
-          </SectionLink>
+          <nav aria-label="Main" className="hidden lg:block">
+            <ul className="flex items-center gap-5 xl:gap-8">
+              {siteConfig.nav.map((item) => {
+                const current = active === item.href.slice(1);
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      aria-current={current ? "true" : undefined}
+                      className={cn(
+                        "group/nav relative flex h-11 items-center text-[0.75rem] font-semibold uppercase tracking-[0.14em] transition-[color,transform] duration-(--dur-normal) ease-(--ease-premium) hover:translate-x-0.5",
+                        solid ? "hover:text-gold-deep" : "hover:text-gold"
+                      )}
+                    >
+                      {item.label}
+                      <span
+                        aria-hidden="true"
+                        className={cn(
+                          "absolute inset-x-0 bottom-2.5 h-px origin-left transition-transform duration-(--dur-normal) ease-(--ease-premium)",
+                          solid ? "bg-gold-deep" : "bg-gold",
+                          current ? "scale-x-100" : "scale-x-0 group-hover/nav:scale-x-100"
+                        )}
+                      />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
 
-          <button
-            ref={triggerRef}
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            className="group/roll -mr-3 flex h-11 min-w-11 items-center justify-center px-3 text-ui font-medium uppercase lg:hidden"
-          >
-            <RollingText text={open ? "Close" : "Menu"} />
-          </button>
+          <div className="flex items-center gap-2">
+            <ButtonLink href="#contact" variant={solid ? "forest" : "gold"} arrow className="hidden h-11 lg:inline-flex">
+              Enquire
+            </ButtonLink>
+            <button
+              ref={buttonRef}
+              type="button"
+              aria-expanded={open}
+              aria-controls="mobile-nav"
+              onClick={() => setOpen((v) => !v)}
+              className="-mr-2 flex h-11 items-center gap-2 rounded-md px-3 text-[0.75rem] font-semibold uppercase tracking-[0.14em] lg:hidden"
+            >
+              {open ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+              <span className="max-[359px]:sr-only">{open ? "Close" : "Menu"}</span>
+            </button>
+          </div>
+        </div>
+
+        <div ref={panelRef} id="mobile-nav" hidden={!open} className="border-t border-forest/10 bg-cream text-forest lg:hidden">
+          <nav aria-label="Mobile" className="container-page pb-6 pt-2">
+            <ol>
+              {siteConfig.nav.map((item, i) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={close}
+                    aria-current={active === item.href.slice(1) ? "true" : undefined}
+                    className="flex h-14 items-baseline gap-4 border-b border-forest/10 pt-4 font-serif text-2xl font-medium aria-[current=true]:text-gold-deep"
+                  >
+                    <span aria-hidden="true" className="micro-label w-6 text-gold-deep">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <ButtonLink href="#contact" onClick={close} arrow size="lg" className="mt-6 w-full">
+              Send enquiry
+            </ButtonLink>
+          </nav>
         </div>
       </header>
-
-      <div
-        id="mobile-menu"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Site menu"
-        data-open={open}
-        className={cn(
-          "fixed inset-0 z-40 flex flex-col overflow-y-auto bg-white px-(--gutter) pb-10 pt-28 text-black lg:hidden",
-          open
-            ? "visible opacity-100 transition-opacity duration-300 ease-tonalli"
-            : "invisible opacity-0 transition-[opacity,visibility] duration-200 ease-exit"
-        )}
-      >
-        <nav aria-label="Menu">
-          <ul>
-            {primaryNav.map((link, i) => (
-              <li key={link.href}>
-                <SectionLink
-                  ref={i === 0 ? firstLinkRef : undefined}
-                  href={link.href}
-                  tabIndex={open ? 0 : -1}
-                  aria-current={active === link.href.slice(1) ? "true" : undefined}
-                  onNavigate={() => setOpen(false)}
-                  className="mask-line flex min-h-14 items-center text-[2.75rem] font-medium uppercase leading-none tracking-[-0.01em] aria-[current=true]:underline aria-[current=true]:decoration-2 aria-[current=true]:underline-offset-[6px]"
-                >
-                  <span style={{ transitionDelay: open ? `${i * 50}ms` : "0ms" }}>{link.label}</span>
-                </SectionLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="mt-12 text-label uppercase">
-          <p className="mask-line font-bold">
-            <span style={{ transitionDelay: open ? "260ms" : "0ms" }}>E-mail</span>
-          </p>
-          <p className="mask-line mt-1 text-body normal-case">
-            <span style={{ transitionDelay: open ? "300ms" : "0ms" }}>{siteConfig.contact.email}</span>
-          </p>
-        </div>
-      </div>
     </>
   );
 }

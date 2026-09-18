@@ -7,6 +7,8 @@ export const siteConfig: SiteConfig = {
   description:
     "Shrisantosh Traders supplies quality-graded poppy seeds for customers seeking consistent selection, professional processing and dependable bulk supply.",
   product: "Poppy Seeds",
+  // Production origin, e.g. https://www.example.com — enables canonical and Open Graph image URLs.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "",
   contact: {
     // Placeholder — replace with verified business contact before launch.
     phone: "ADD_PHONE_NUMBER",
@@ -21,8 +23,8 @@ export const siteConfig: SiteConfig = {
   },
   nav: [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
     { label: "Grades", href: "#grades" },
+    { label: "About", href: "#about" },
     { label: "Packaging", href: "#packaging" },
     { label: "Process", href: "#process" },
     { label: "Uses", href: "#uses" },

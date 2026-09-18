@@ -39,4 +39,32 @@ export const features: Feature[] = [
   },
 ];
 
+// Condensed for the About section: related features above are combined into four buyer benefits.
+export const benefits: Feature[] = [
+  {
+    id: "quality-selection",
+    title: "Quality-based selection",
+    description: "Different grades available according to your specific quality requirement and application.",
+    icon: "award",
+  },
+  {
+    id: "pack-options",
+    title: "Multiple pack options",
+    description: "25 kg and 50 kg standard availability, with smaller packs (50g–2kg) available on demand.",
+    icon: "package",
+  },
+  {
+    id: "controlled-process",
+    title: "Controlled process",
+    description: "Farmer sourcing, multi-stage cleaning and precision sorting before final grading.",
+    icon: "filter",
+  },
+  {
+    id: "bulk-export-supply",
+    title: "Bulk & export supply",
+    description: "Consistent batch-to-batch supply for larger requirements, with export-oriented supply where applicable.",
+    icon: "globe",
+  },
+];
+
 export default features;

@@ -4,19 +4,15 @@ import { createContext, useContext, useMemo, useState } from "react";
 
 interface EnquirySelection {
   grade: string;
-  packing: string;
   setGrade: (grade: string) => void;
-  setPacking: (packing: string) => void;
 }
 
 const EnquiryContext = createContext<EnquirySelection | null>(null);
 
+// Lets a product card preselect its grade in the enquiry form.
 export function EnquiryProvider({ children }: { children: React.ReactNode }) {
   const [grade, setGrade] = useState("");
-  const [packing, setPacking] = useState("");
-
-  const value = useMemo(() => ({ grade, packing, setGrade, setPacking }), [grade, packing]);
-
+  const value = useMemo(() => ({ grade, setGrade }), [grade]);
   return <EnquiryContext.Provider value={value}>{children}</EnquiryContext.Provider>;
 }
 

@@ -1,332 +1,294 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { Check, Copy, Info, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { products } from "@/data/products";
 import { packaging } from "@/data/packaging";
-import { siteConfig } from "@/data/site-config";
-import {
-  type EnquiryFormData,
-  type EnquiryFormErrors,
-  submitEnquiry,
-  validateEnquiryForm,
-} from "@/lib/whatsapp";
+import { type EnquiryFormData, type EnquiryFormErrors, submitEnquiry, validateEnquiryForm } from "@/lib/whatsapp";
+import { getContactItems, type ContactItem } from "@/lib/contact";
 import { useEnquirySelection } from "@/components/enquiry-context";
+import { Eyebrow } from "@/components/section-heading";
+import { FormField, controlClass } from "@/components/form-field";
+import { Button, ButtonLink } from "@/components/ui/button";
+import { BotanicalStem, RingOutline } from "@/components/decor";
 import { Reveal } from "@/components/reveal";
-import { RollingText } from "@/components/rolling-text";
 import { cn } from "@/lib/utils";
 
 type FieldName = keyof EnquiryFormData;
 type Status = "idle" | "submitting" | "success" | "prepared" | "error";
 
-const emptyForm: EnquiryFormData = {
-  name: "",
-  company: "",
-  phone: "",
-  email: "",
-  grade: "",
-  quantity: "",
-  packing: "",
-  message: "",
-};
+const emptyForm: EnquiryFormData = { name: "", company: "", phone: "", email: "", grade: "", quantity: "", packing: "", message: "" };
 
-const fieldLabels: Record<FieldName, string> = {
+const labels: Record<FieldName, string> = {
   name: "Name",
   company: "Company",
   phone: "Phone",
   email: "Email",
   grade: "Required grade",
   quantity: "Quantity",
-  packing: "Packing",
+  packing: "Packing requirement",
   message: "Message",
 };
 
-// Visual order, used to focus the first invalid field.
 const fieldOrder: FieldName[] = ["name", "company", "phone", "email", "grade", "quantity", "packing", "message"];
 
 const NOT_SURE = "Not sure — need assistance";
+const gradeOptions = [...products.map((p) => p.name), NOT_SURE];
+const quantityOptions = [...packaging.standard.map((p) => p.size), "Custom"];
+const packingOptions = [...packaging.onDemand.map((p) => p.size), "Custom"];
 
-const gradeOptions = [...products.map((p) => ({ value: p.name, label: `${p.name} (${p.category})` })), { value: NOT_SURE, label: NOT_SURE }];
+const contactIcons: Record<ContactItem["kind"], typeof Phone> = { phone: Phone, email: Mail, address: MapPin };
 
-const quantityOptions = [
-  { value: "25 KG", label: "25 KG" },
-  { value: "50 KG", label: "50 KG" },
-  { value: "Custom quantity", label: "Custom quantity" },
-];
-
-const packingOptions = [
-  ...packaging.standard.map((p) => ({ value: p.size, label: `${p.size} (Standard)` })),
-  ...packaging.onDemand.map((p) => ({ value: p.size, label: `${p.size} (On demand)` })),
-  { value: "Custom requirement", label: "Custom requirement" },
-];
-
-function Field({
-  name,
-  required,
-  helper,
-  error,
-  className,
-  children,
-}: {
-  name: FieldName;
-  required?: boolean;
-  helper?: string;
-  error?: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
+function SuccessMark() {
   return (
-    <div className={className}>
-      <label htmlFor={name} className="text-label font-bold uppercase">
-        {fieldLabels[name]}
-        {required ? <span aria-hidden="true"> *</span> : <span className="font-normal text-muted-foreground"> (optional)</span>}
-      </label>
-      {children}
-      {helper && !error && (
-        <p id={`${name}-helper`} className="mt-2 text-sm text-muted-foreground">
-          {helper}
-        </p>
-      )}
-      {error && (
-        <p id={`${name}-error`} className="mt-2 text-sm font-medium text-destructive">
-          {error}
-        </p>
-      )}
-    </div>
+    <span aria-hidden="true" className="flex size-12 shrink-0 animate-pop items-center justify-center rounded-full bg-forest text-gold">
+      <svg viewBox="0 0 24 24" className="size-6" fill="none">
+        <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="30" className="animate-draw" />
+      </svg>
+    </span>
   );
 }
 
 export function Enquiry() {
-  const { grade, packing } = useEnquirySelection();
-  const formRef = useRef<HTMLFormElement>(null);
-  const [formData, setFormData] = useState<EnquiryFormData>(emptyForm);
-  const [errors, setErrors] = useState<EnquiryFormErrors>({});
-  const [status, setStatus] = useState<Status>("idle");
-  const [summary, setSummary] = useState("");
+  const contacts = getContactItems();
+  const phone = contacts.find((c) => c.kind === "phone");
+  const { grade } = useEnquirySelection();
 
-  // Adjust form state during render when the shared selection changes,
-  // rather than in an effect — avoids an extra cascading render.
-  const [prevSelection, setPrevSelection] = useState({ grade, packing });
-  if (prevSelection.grade !== grade || prevSelection.packing !== packing) {
-    setPrevSelection({ grade, packing });
-    setFormData((prev) => ({
-      ...prev,
-      grade: grade || prev.grade,
-      packing: packing || prev.packing,
-    }));
+  const formRef = useRef<HTMLFormElement>(null);
+  const submitting = useRef(false);
+  const [data, setData] = useState<EnquiryFormData>(emptyForm);
+  const [errors, setErrors] = useState<EnquiryFormErrors>({});
+  const [summary, setSummary] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+  const [copied, setCopied] = useState(false);
+
+  // A grade's "Enquire" button preselects it here (adjusted during render, not in an effect).
+  const [prevGrade, setPrevGrade] = useState(grade);
+  if (grade !== prevGrade) {
+    setPrevGrade(grade);
+    if (grade) setData((prev) => ({ ...prev, grade }));
   }
 
-  const helpers: Partial<Record<FieldName, string>> = {
-    phone: "Include your country code. We reply on WhatsApp or by phone.",
-    quantity: "Standard supply is in 25 KG and 50 KG sacks.",
-  };
-
-  const control = (field: FieldName, required = false) => {
-    const error = errors[field];
-    const describedBy = error ? `${field}-error` : helpers[field] ? `${field}-helper` : undefined;
-    return {
-      id: field,
-      name: field,
-      value: formData[field] ?? "",
-      required,
-      "aria-invalid": error ? true : undefined,
-      "aria-describedby": describedBy,
-      onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-        const { value } = e.target;
-        setFormData((prev) => ({ ...prev, [field]: value }));
-        if (errors[field]) {
-          const next = validateEnquiryForm({ ...formData, [field]: value }).errors[field];
-          setErrors((prev) => ({ ...prev, [field]: next }));
-        }
-      },
-      onBlur: () => {
-        const next = validateEnquiryForm(formData).errors[field];
-        setErrors((prev) => ({ ...prev, [field]: next }));
-      },
-      className: cn(
-        "mt-2 block min-h-12 w-full rounded-none border-0 border-b bg-transparent px-0 py-3 text-body text-foreground placeholder:text-muted-foreground",
-        "focus:outline-none focus-visible:outline-none focus:shadow-[0_1px_0_0_var(--foreground)]",
-        error ? "border-destructive focus:border-destructive" : "border-input focus:border-foreground"
-      ),
-    };
-  };
+  const bind = (field: FieldName, { required = false, helper = false } = {}) => ({
+    id: field,
+    name: field,
+    value: data[field] ?? "",
+    required,
+    "aria-invalid": errors[field] ? true : undefined,
+    "aria-describedby": errors[field] ? `${field}-error` : helper ? `${field}-helper` : undefined,
+    className: controlClass,
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      const next = { ...data, [field]: e.target.value };
+      setData(next);
+      if (errors[field]) setErrors((prev) => ({ ...prev, [field]: validateEnquiryForm(next).errors[field] }));
+    },
+    onBlur: () => setErrors((prev) => ({ ...prev, [field]: validateEnquiryForm(data).errors[field] })),
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const validation = validateEnquiryForm(formData);
-    setErrors(validation.errors);
+    if (submitting.current) return;
 
+    const validation = validateEnquiryForm(data);
+    setErrors(validation.errors);
     if (!validation.isValid) {
       const invalid = fieldOrder.filter((f) => validation.errors[f]);
-      setSummary(`${invalid.length} ${invalid.length === 1 ? "field needs" : "fields need"} attention: ${invalid.map((f) => fieldLabels[f]).join(", ")}.`);
+      setSummary(`Please check ${invalid.length === 1 ? "1 field" : `${invalid.length} fields`}: ${invalid.map((f) => labels[f]).join(", ")}.`);
       formRef.current?.querySelector<HTMLElement>(`#${invalid[0]}`)?.focus();
       return;
     }
 
     setSummary("");
+    setCopied(false);
+    submitting.current = true;
     setStatus("submitting");
     try {
-      if (submitEnquiry(formData)) {
-        setStatus("success");
-        setTimeout(() => {
-          setFormData(emptyForm);
-          setStatus("idle");
-        }, 6000);
-      } else {
-        setStatus("prepared");
-      }
+      setStatus(submitEnquiry(data) ? "success" : "prepared");
     } catch {
       setStatus("error");
+    } finally {
+      submitting.current = false;
     }
   };
 
-  const filledFields = fieldOrder.filter((f) => formData[f]);
+  const copyDetails = async () => {
+    const text = fieldOrder
+      .filter((f) => data[f])
+      .map((f) => `${labels[f]}: ${data[f]}`)
+      .join("\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="border-t border-border bg-background py-24 text-foreground lg:py-30">
-      <div className="grid grid-cols-1 gap-8 px-(--gutter) lg:grid-cols-[var(--col-label)_1fr] lg:gap-0">
-        <Reveal className="flex items-baseline justify-between lg:block lg:pr-8">
-          <p className="text-ui font-medium uppercase">Enquiry</p>
-          <p className="text-label tabular-nums text-muted-foreground lg:mt-3">05</p>
+    <section id="contact" aria-labelledby="contact-title" className="on-dark grain section-space relative isolate overflow-hidden bg-forest text-cream">
+      <RingOutline className="-left-24 top-24 size-72 border-gold/15" />
+      <BotanicalStem className="absolute -right-4 bottom-0 -z-10 hidden h-[30rem] text-gold/15 lg:block" />
+
+      <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-12">
+        <Reveal className="lg:col-span-5">
+          <Eyebrow tone="dark">Enquiry</Eyebrow>
+          <h2 id="contact-title" className="mt-6 font-serif text-statement font-medium">
+            Let&apos;s talk <em className="font-medium italic text-gold">supply.</em>
+          </h2>
+          <span aria-hidden="true" className="mt-8 block h-px w-24 bg-gold" />
+          <p className="mt-8 max-w-md text-lead text-cream-muted">
+            Share your required grade, quantity and packing preference, and we&apos;ll come back with availability and pricing.
+          </p>
+
+          {contacts.length > 0 && (
+            <div className="mt-10">
+              <ul className="space-y-3">
+                {contacts.map((item) => {
+                  const Icon = contactIcons[item.kind];
+                  return (
+                    <li key={item.kind} className="flex gap-3">
+                      <Icon aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-gold" />
+                      <span>
+                        <span className="sr-only">{item.label}: </span>
+                        {item.href ? (
+                          <a href={item.href} className="underline decoration-gold/50 underline-offset-4 hover:decoration-gold">
+                            {item.value}
+                          </a>
+                        ) : (
+                          item.value
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+              {phone && (
+                <ButtonLink href={phone.href} variant="outlineCream" arrow className="mt-6">
+                  Call us
+                </ButtonLink>
+              )}
+            </div>
+          )}
+
+          <dl className="mt-12 grid gap-6 border-t border-cream/15 pt-8 sm:grid-cols-3 lg:grid-cols-1">
+            <div>
+              <dt className="micro-label text-gold">Grades</dt>
+              <dd className="mt-2 font-serif text-xl">{products.map((p) => p.name).join(" · ")}</dd>
+            </div>
+            <div>
+              <dt className="micro-label text-gold">Standard packs</dt>
+              <dd className="mt-2 font-serif text-xl">{packaging.standard.map((p) => p.size).join(" · ")}</dd>
+            </div>
+            <div>
+              <dt className="micro-label text-gold">Retail packs</dt>
+              <dd className="mt-2 font-serif text-xl">
+                {packaging.onDemand[0].size} – {packaging.onDemand[packaging.onDemand.length - 1].size}
+              </dd>
+            </div>
+          </dl>
         </Reveal>
 
-        <div>
-          <Reveal delay={40}>
-            <h2 id="contact-title" className="max-w-[20ch] text-display font-medium uppercase tracking-[-0.01em]">
-              Tell us what you need.
-            </h2>
-            <p className="mt-6 max-w-[52ch] text-lead text-muted-foreground">
-              Share your grade, quantity and packing preference. We&apos;ll come back with
-              availability and pricing.
-            </p>
-          </Reveal>
-
-          <div className="mt-12 grid gap-16 lg:mt-16 xl:grid-cols-[1fr_16rem] xl:gap-20">
-            <Reveal delay={60}>
-              <form ref={formRef} onSubmit={handleSubmit} noValidate aria-describedby="form-required-note" className="space-y-12">
-                <p id="form-required-note" className="text-label text-muted-foreground">
-                  Fields marked * are required.
+        <Reveal className="lg:col-span-7">
+          <div className="rounded-xl bg-cream p-6 text-charcoal shadow-[0_50px_100px_-40px_rgb(0_0_0/0.55)] sm:p-10">
+            <form ref={formRef} onSubmit={handleSubmit} noValidate>
+              <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-forest/15 pb-5">
+                <p className="font-serif text-2xl font-semibold text-forest">Enquiry details</p>
+                <p className="text-sm text-ink-muted">
+                  <span className="text-terracotta-deep">*</span> Required
                 </p>
+              </div>
 
-                <fieldset className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
-                  <legend className="mb-6 text-ui font-bold uppercase">Your details</legend>
-                  <Field name="name" required error={errors.name}>
-                    <input type="text" autoComplete="name" {...control("name", true)} />
-                  </Field>
-                  <Field name="company">
-                    <input type="text" autoComplete="organization" {...control("company")} />
-                  </Field>
-                  <Field name="phone" required helper={helpers.phone} error={errors.phone}>
-                    <input type="tel" inputMode="tel" autoComplete="tel" placeholder="+91 98765 43210" {...control("phone", true)} />
-                  </Field>
-                  <Field name="email" error={errors.email}>
-                    <input type="email" inputMode="email" autoComplete="email" placeholder="name@company.com" {...control("email")} />
-                  </Field>
-                </fieldset>
+              <div className="mt-6 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                <FormField id="name" label={labels.name} required error={errors.name}>
+                  <input type="text" autoComplete="name" {...bind("name", { required: true })} />
+                </FormField>
+                <FormField id="company" label={labels.company}>
+                  <input type="text" autoComplete="organization" {...bind("company")} />
+                </FormField>
+                <FormField id="phone" label={labels.phone} required helper="Include country code, e.g. +91" error={errors.phone}>
+                  <input type="tel" inputMode="tel" autoComplete="tel" {...bind("phone", { required: true, helper: true })} />
+                </FormField>
+                <FormField id="email" label={labels.email} error={errors.email}>
+                  <input type="email" inputMode="email" autoComplete="email" {...bind("email")} />
+                </FormField>
+                <FormField id="grade" label={labels.grade} required error={errors.grade}>
+                  <select {...bind("grade", { required: true })}>
+                    <option value="">Select a grade</option>
+                    {gradeOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </FormField>
+                <FormField id="quantity" label={labels.quantity} required error={errors.quantity}>
+                  <select {...bind("quantity", { required: true })}>
+                    <option value="">Select quantity</option>
+                    {quantityOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </FormField>
+                <FormField id="packing" label={labels.packing} className="sm:col-span-2">
+                  <select {...bind("packing")}>
+                    <option value="">Select packing</option>
+                    {packingOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </FormField>
+                <FormField id="message" label={labels.message} className="sm:col-span-2">
+                  <textarea rows={4} {...bind("message")} className={cn(controlClass, "h-auto min-h-28 py-3")} />
+                </FormField>
+              </div>
 
-                <fieldset className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
-                  <legend className="mb-6 text-ui font-bold uppercase">Your requirement</legend>
-                  <Field name="grade" required error={errors.grade}>
-                    <select {...control("grade", true)}>
-                      <option value="">Select a grade</option>
-                      {gradeOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {opt.label}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                  <Field name="quantity" required helper={helpers.quantity} error={errors.quantity}>
-                    <select {...control("quantity", true)}>
-                      <option value="">Select quantity</option>
-                      {quantityOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {opt.label}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                  <Field name="packing" className="sm:col-span-2">
-                    <select {...control("packing")}>
-                      <option value="">Select packing</option>
-                      {packingOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {opt.label}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                </fieldset>
+              <p role="alert" className="mt-5 text-sm font-semibold text-terracotta-deep empty:hidden">
+                {summary}
+              </p>
 
-                <fieldset>
-                  <legend className="mb-6 text-ui font-bold uppercase">Anything else</legend>
-                  <Field name="message">
-                    <textarea rows={4} placeholder="Delivery location, timeline, or questions" {...control("message")} />
-                  </Field>
-                </fieldset>
-
-                <div role="alert" className={cn("text-body font-medium text-destructive", !summary && "sr-only")}>
-                  {summary}
-                </div>
-
-                <div role="status" aria-live="polite">
-                  {status === "success" && (
-                    <div className="border border-foreground p-5">
-                      <p className="text-ui font-bold uppercase">WhatsApp is open with your enquiry</p>
-                      <p className="mt-2 text-body text-muted-foreground">Review the message and press Send to complete it.</p>
+              <div role="status" aria-live="polite" className="empty:hidden">
+                {status === "success" && (
+                  <div className="mt-6 flex animate-panel-in items-start gap-4 rounded-lg border border-forest/15 bg-warm-white p-5">
+                    <SuccessMark />
+                    <div>
+                      <p className="font-serif text-2xl font-semibold text-forest">Enquiry ready in WhatsApp</p>
+                      <p className="mt-1 text-ink-muted">Review the message in WhatsApp and press Send to complete your enquiry.</p>
                     </div>
-                  )}
-                  {status === "prepared" && (
-                    <div className="border border-foreground p-5">
-                      <p className="text-ui font-bold uppercase">Your enquiry is ready</p>
-                      <p className="mt-2 text-body text-muted-foreground">
-                        WhatsApp isn&apos;t connected yet. Share these details by phone or email using the contacts beside this form.
-                      </p>
-                      <dl className="mt-4 grid grid-cols-[7rem_1fr] gap-y-1 text-body">
-                        {filledFields.map((key) => (
-                          <div key={key} className="contents">
-                            <dt className="text-muted-foreground">{fieldLabels[key]}</dt>
-                            <dd>{formData[key]}</dd>
-                          </div>
-                        ))}
-                      </dl>
-                    </div>
-                  )}
-                  {status === "error" && (
-                    <p className="border border-destructive p-5 text-body text-destructive">
-                      WhatsApp couldn&apos;t open. Try again, or contact us by phone or email.
-                    </p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === "submitting"}
-                  aria-busy={status === "submitting"}
-                  className="group/roll inline-flex min-h-14 w-full items-center justify-center gap-2 bg-foreground px-8 text-ui font-medium uppercase text-background transition-[opacity,transform] duration-150 active:scale-[0.98] disabled:opacity-50 sm:w-auto"
-                >
-                  <span aria-hidden="true" className="block size-[11px] bg-current transition-transform duration-300 ease-tonalli group-hover/roll:-translate-x-1" />
-                  <RollingText text={status === "submitting" ? "Sending" : "Send enquiry"} />
-                </button>
-              </form>
-            </Reveal>
-
-            <Reveal delay={80}>
-              <h3 className="text-ui font-bold uppercase">Contact directly</h3>
-              <dl className="mt-6 space-y-6">
-                {[
-                  ["Phone", siteConfig.contact.phone],
-                  ["E-mail", siteConfig.contact.email],
-                  ["Address", siteConfig.contact.address],
-                ].map(([label, value]) => (
-                  <div key={label}>
-                    <dt className="text-label font-bold uppercase">{label}</dt>
-                    <dd className="mt-1 break-words text-body text-muted-foreground">{value}</dd>
                   </div>
-                ))}
-              </dl>
-            </Reveal>
+                )}
+                {status === "prepared" && (
+                  <div className="mt-6 flex animate-panel-in items-start gap-4 rounded-lg border border-gold/40 bg-warm-white p-5">
+                    <span aria-hidden="true" className="flex size-12 shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold-deep">
+                      <Info className="size-6" />
+                    </span>
+                    <div>
+                      <p className="font-serif text-2xl font-semibold text-forest">Your enquiry is ready to share</p>
+                      <p className="mt-1 text-ink-muted">Online sending isn&apos;t connected yet. Copy your details to share them with our team directly.</p>
+                      <Button variant="outlineForest" onClick={copyDetails} className="mt-4">
+                        {copied ? <Check aria-hidden="true" className="size-4" /> : <Copy aria-hidden="true" className="size-4" />}
+                        {copied ? "Copied" : "Copy details"}
+                      </Button>
+                    </div>
+                  </div>
+                )}
+                {status === "error" && (
+                  <p className="mt-6 flex animate-panel-in items-center gap-3 rounded-lg border border-terracotta-deep/40 bg-warm-white p-5 font-medium text-terracotta-deep">
+                    Something went wrong opening WhatsApp. Please try again.
+                  </p>
+                )}
+              </div>
+
+              <Button type="submit" size="lg" arrow={status !== "submitting"} disabled={status === "submitting"} className="mt-8 w-full sm:w-auto">
+                {status === "submitting" && <Loader2 aria-hidden="true" className="size-4 animate-spin" />}
+                {status === "submitting" ? "Sending…" : "Send enquiry"}
+              </Button>
+            </form>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

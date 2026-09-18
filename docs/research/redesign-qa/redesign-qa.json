@@ -1,0 +1,407 @@
+{
+  "widths": {
+    "320": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 13187,
+      "screens": 16.5,
+      "sections": [
+        "home:835",
+        "grades:2781",
+        "about:1597",
+        "packaging:1442",
+        "process:2351",
+        "uses:1741",
+        "contact:1697"
+      ],
+      "h1": "38px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "problems": []
+    },
+    "360": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 12586,
+      "screens": 15.7,
+      "sections": [
+        "home:825",
+        "grades:2738",
+        "about:1457",
+        "packaging:1378",
+        "process:2214",
+        "uses:1597",
+        "contact:1634"
+      ],
+      "h1": "38px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "problems": []
+    },
+    "375": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 12430,
+      "screens": 15.5,
+      "sections": [
+        "home:808",
+        "grades:2746",
+        "about:1431",
+        "packaging:1354",
+        "process:2188",
+        "uses:1551",
+        "contact:1610"
+      ],
+      "h1": "38px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "axe": [],
+      "problems": []
+    },
+    "390": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 12362,
+      "screens": 15.5,
+      "sections": [
+        "home:759",
+        "grades:2746",
+        "about:1431",
+        "packaging:1364",
+        "process:2159",
+        "uses:1551",
+        "contact:1610"
+      ],
+      "h1": "38px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "problems": []
+    },
+    "414": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 12317,
+      "screens": 15.4,
+      "sections": [
+        "home:777",
+        "grades:2800",
+        "about:1402",
+        "packaging:1379",
+        "process:2107",
+        "uses:1499",
+        "contact:1610"
+      ],
+      "h1": "38px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "problems": []
+    },
+    "480": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 12122,
+      "screens": 15.2,
+      "sections": [
+        "home:813",
+        "grades:2816",
+        "about:1291",
+        "packaging:1368",
+        "process:2055",
+        "uses:1427",
+        "contact:1610"
+      ],
+      "h1": "39.36px",
+      "bodySize": "18px",
+      "smallTargets": [],
+      "problems": []
+    },
+    "768": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 9096,
+      "screens": 10.1,
+      "sections": [
+        "home:1005",
+        "grades:1675",
+        "about:902",
+        "packaging:1401",
+        "process:1290",
+        "uses:931",
+        "contact:1335"
+      ],
+      "h1": "48.576px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "problems": []
+    },
+    "820": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 9164,
+      "screens": 10.2,
+      "sections": [
+        "home:1046",
+        "grades:1716",
+        "about:904",
+        "packaging:1434",
+        "process:1239",
+        "uses:932",
+        "contact:1336"
+      ],
+      "h1": "50.24px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "problems": []
+    },
+    "1024": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 7934,
+      "screens": 8.8,
+      "sections": [
+        "home:720",
+        "grades:1833",
+        "about:804",
+        "packaging:1041",
+        "process:1110",
+        "uses:916",
+        "contact:952"
+      ],
+      "h1": "56.768px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Enquire\" 40px",
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "problems": []
+    },
+    "1280": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 6791,
+      "screens": 7.5,
+      "sections": [
+        "home:800",
+        "grades:1053",
+        "about:698",
+        "packaging:955",
+        "process:1016",
+        "uses:759",
+        "contact:952"
+      ],
+      "h1": "64.96px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Enquire\" 40px",
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "problems": []
+    },
+    "1440": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 6797,
+      "screens": 7.6,
+      "sections": [
+        "home:800",
+        "grades:1055",
+        "about:698",
+        "packaging:956",
+        "process:1018",
+        "uses:761",
+        "contact:952"
+      ],
+      "h1": "68px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Enquire\" 40px",
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "axe": [],
+      "problems": []
+    },
+    "1920": {
+      "overflowX": 0,
+      "wideEls": [],
+      "brokenImages": [],
+      "imagesMissingAlt": [],
+      "imageCount": 6,
+      "brokenAnchors": [],
+      "placeholders": [],
+      "fixedOrSticky": [
+        "header"
+      ],
+      "pageHeight": 6797,
+      "screens": 7.6,
+      "sections": [
+        "home:800",
+        "grades:1055",
+        "about:698",
+        "packaging:956",
+        "process:1018",
+        "uses:761",
+        "contact:952"
+      ],
+      "h1": "68px",
+      "bodySize": "18px",
+      "smallTargets": [
+        "a \"Enquire\" 40px",
+        "a \"Home\" 36px",
+        "a \"About\" 36px",
+        "a \"Grades\" 36px",
+        "a \"Packaging\" 36px",
+        "a \"Process\" 36px",
+        "a \"Uses\" 36px",
+        "a \"Contact\" 36px"
+      ],
+      "problems": []
+    }
+  },
+  "mobileMenuOpen": {
+    "visible": true,
+    "expanded": "true",
+    "links": [
+      "Home",
+      "About",
+      "Grades",
+      "Packaging",
+      "Process",
+      "Uses",
+      "Contact",
+      "Send enquiry"
+    ]
+  },
+  "mobileMenuAfterEscape": {
+    "hidden": true,
+    "focusOnButton": true
+  },
+  "gradePreselect": "Shri",
+  "hashAfterCardClick": "#contact",
+  "formInvalid": {
+    "summary": "Please check 4 fields: Name, Phone, Required grade, Quantity.",
+    "focused": "name"
+  },
+  "formSubmitState": "Your enquiry is ready to share.Online sending isn't connected yet. Copy your details and share them with our team direct"
+}

@@ -77,6 +77,7 @@ export interface SiteConfig {
   tagline: string;
   description: string;
   product: string;
+  url: string;
   contact: {
     phone: string;
     whatsapp: string;

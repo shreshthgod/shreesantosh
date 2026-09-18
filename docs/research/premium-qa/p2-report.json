@@ -1,0 +1,180 @@
+{
+  "widths": {
+    "320": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12864,
+      "smallTargets": [],
+      "problems": []
+    },
+    "360": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12627,
+      "smallTargets": [],
+      "problems": []
+    },
+    "375": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12491,
+      "smallTargets": [],
+      "axe": [],
+      "problems": []
+    },
+    "390": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12533,
+      "smallTargets": [],
+      "problems": []
+    },
+    "414": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "40px",
+      "h2": "38px",
+      "pageHeight": 12435,
+      "smallTargets": [],
+      "problems": []
+    },
+    "480": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "42.08px",
+      "h2": "38px",
+      "pageHeight": 12212,
+      "smallTargets": [],
+      "problems": []
+    },
+    "768": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "55.328px",
+      "h2": "45.472px",
+      "pageHeight": 10918,
+      "smallTargets": [],
+      "problems": []
+    },
+    "820": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "57.72px",
+      "h2": "46.98px",
+      "pageHeight": 10986,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1024": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "67.104px",
+      "h2": "52.896px",
+      "pageHeight": 9607,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1280": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "78.88px",
+      "h2": "60.32px",
+      "pageHeight": 9783,
+      "smallTargets": [],
+      "problems": []
+    },
+    "1440": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "84px",
+      "h2": "64px",
+      "pageHeight": 9902,
+      "smallTargets": [],
+      "axe": [],
+      "problems": []
+    },
+    "1920": {
+      "overflowX": 0,
+      "wide": [],
+      "brokenImages": [],
+      "brokenAnchors": [],
+      "placeholders": 0,
+      "h1": "84px",
+      "h2": "64px",
+      "pageHeight": 9909,
+      "smallTargets": [],
+      "problems": []
+    }
+  },
+  "headerTop": "rgba(0, 0, 0, 0)",
+  "headerScrolled": "oklab(0.956536 0.00166348 0.0171149 / 0.95)",
+  "gradeKeyboard": {
+    "selected": "04White Tinopal",
+    "focused": "04White Tinopal"
+  },
+  "process@0.02": {
+    "bg": "rgb(221, 231, 217)",
+    "current": "01PurchaseProcurement from far"
+  },
+  "process@0.5": {
+    "bg": "rgb(242, 228, 195)",
+    "current": "04SortingOptical and mechanica"
+  },
+  "process@0.95": {
+    "bg": "rgb(18, 55, 42)",
+    "current": "06ExportPrepared product packe"
+  },
+  "formInvalid": {
+    "summary": "Please check 4 fields: Name, Phone, Required grade, Quantity.",
+    "focused": "name"
+  },
+  "formState": "Your enquiry is ready to shareOnline sending isn't connected yet. Copy your details to sha",
+  "mobileSwipe": "02Shubh Laxmi",
+  "mobileUseTap": "true",
+  "mobileFieldCovered": {
+    "headerBottom": 73,
+    "fieldTop": 389,
+    "covered": false
+  }
+}

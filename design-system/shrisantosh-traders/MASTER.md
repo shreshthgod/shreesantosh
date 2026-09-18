@@ -15,23 +15,23 @@
 
 ## Implemented system (authoritative — overrides the generated rules below)
 
-The generated recommendation (Exaggerated Minimalism, Inter, a single primary CTA, high contrast) was adopted.
-Its **slate + red palette was not.** The site follows the bureautonalli.com template the owner chose: pure black and white, with red reserved for errors only.
-The source of truth is `src/app/globals.css`.
+The owner rejected the plain minimal version. The site is now a **premium, colourful, editorial Indian agricultural ingredient brand**.
+It uses deep forest green, cream and grain gold, with saffron, terracotta, sage and peach as intentional section and product accents.
+The source of truth is `src/app/globals.css` (`@theme` tokens, `container-page`, `section-space`, `grain` and `micro-label` utilities).
+The generated "Liquid Glass" style was rejected, because the owner excluded glassmorphism.
 
 | Area | Decision |
 |---|---|
-| Colour | Semantic tokens only (`background`, `foreground`, `muted-foreground`, `border`, `input`, `destructive`). `muted-foreground` is 7.0:1 on white and 8.6:1 on black. Dark bands use the `.dark` class scope; no raw hex or opacity greys in components. |
-| Type | Inter, preferring local Helvetica Neue; Jost 300 for the wordmark. rem scale: `text-label` 12, `text-ui` 14, `text-body` 16/1.6, `text-lead` 18, `text-display` clamp 28→48, `text-hero` clamp 36→76. Uppercase labels only; body copy ≥16px; form inputs 16px (prevents iOS zoom). |
-| Spacing | `--gutter` 20px mobile / 32px desktop, `--col-label` 348px, section padding 96/120px, 4pt increments. |
-| Motion | Micro-interactions 150–300ms and `ease-tonalli`. Reveal 500ms with 40ms stagger. Menu 400ms in / 200ms out. Reduced motion stops Lenis smoothing, rolling text and reveals; 3D renders a single still frame. |
-| Touch | ≥44px targets on touch widths, ≥32px on desktop pointer rows. `touch-action: manipulation`. Hover effects scoped to `(hover: hover)`. |
-| Focus / a11y | 2px `currentColor` outline with 3px offset. Skip link. One H1. The mobile menu is a modal dialog with `inert` background and focus return. Active section uses `aria-current`. |
-| Forms | Fieldsets with legends, visible labels, "(optional)" markers, helper text, blur validation, fix-it error copy, an error summary, and focus on the first invalid field. |
-| Fixed overlays | Bottom nav hides (and is inert) over the enquiry form and footer. Floating actions respect `safe-area-inset-bottom`. |
-| 3D | Mounts only when WebGL is supported. Renders only while on screen. Label contrast uses a per-scene tone plus a masked scrim, not blend modes. |
+| Colour | forest #12372A, botanical #0B2419, cream #F6F0E4, warm-white #FCFAF5, gold #C49A45, saffron #D98B3A, terracotta #B85C3D, leaf #6D8B68, sage #C9D8C4, peach #E8B99C, charcoal #172019. Gold, terracotta and leaf are decorative on light surfaces; `gold-deep` #8A6420, `terracotta-deep` #9A4A2F, `leaf-deep` #4E6B4A and `ink-muted` #4A554C carry text (≥4.5:1). |
+| Rhythm | Hero forest → Grades cream → About warm-white → Packaging cream→sage gradient with a forest panel → Process shifting tints (sage, olive, green, gold, peach, forest) → Uses cream with saffron/sage/peach/forest tiles → Enquiry forest with cream form → Footer botanical. |
+| Grade identity | King gold, Shubh Laxmi sage/olive, Shri terracotta, White Tinopal cream/soft gold. Used only on backdrop, number, tab line and bullets. |
+| Type | Cormorant Garamond (display, italic emphasis) + Inter (UI/body). `text-hero` clamp 40→84px, `text-display` 38→64px, `text-statement` 40→80px, `text-title` 28→38px, `text-lead` 18px, `micro-label` 12px uppercase tracked. Custom sizes are registered with tailwind-merge in `src/lib/utils.ts`. Tailwind classes must be literal strings, never assembled at runtime. |
+| Composition | 12-column editorial grids (7/5 splits). Arch and circle image crops, overlapping images, floating labels, oversized numbers, thin gold rules. Decor (`decor.tsx`): seed scatter, botanical stem, pod line art, growth curve, rings, all low opacity. |
+| Interactions | Grades: WAI-ARIA tabs with arrow/Home/End keys, swipe, prev/next buttons and an image crossfade (1.04 out, 0.96 in). Packaging: Bulk/Retail tabs stacked in one grid cell, so the layout never jumps. Process: IntersectionObserver sentinels over the pinned range, a sticky horizontal timeline on desktop and a vertical one on mobile. Uses: tiles reveal on hover, focus or tap (`aria-expanded`). |
+| Motion | Tokens: 180 / 350 / 500 / 700ms, `ease-premium` cubic-bezier(0.16,1,0.3,1). Hero load is staggered in CSS (≤1.3s total). Reveal is 700ms and applies only while scripting is enabled. Reduced motion collapses all animation and turns off smooth scroll. |
+| Honesty | Success animation only when WhatsApp actually opens; otherwise an informational "ready to share" state with copy. `ADD_*` contact placeholders are hidden by `src/lib/contact.ts`. Uses illustrations are original SVGs. Product images are illustrative renders, not photographs. |
 
-Verified 2026-09-17 with axe-core 4.13 (WCAG 2.0/2.1/2.2 A+AA and best-practice): 0 violations at 1440px and 375px.
+Verified 2026-09-17 on the production build: axe-core 4.13 (WCAG 2.2 AA plus best-practice) reports 0 violations at 375px and 1440px. At all 12 widths from 320px to 1920px there is no horizontal overflow, no broken images or anchors, no visible placeholders and no console errors. Weight: about 245KB JS, 75KB fonts, 71KB CSS, 78–152KB images.
 
 ---
 
