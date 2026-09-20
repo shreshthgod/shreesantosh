@@ -4,8 +4,9 @@ import { useRef, useState } from "react";
 import { Check, Copy, Info, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { products } from "@/data/products";
 import { packaging } from "@/data/packaging";
-import { type EnquiryFormData, type EnquiryFormErrors, submitEnquiry, validateEnquiryForm } from "@/lib/whatsapp";
+import { buildWhatsAppMessage, type EnquiryFormData, type EnquiryFormErrors, openWhatsApp, validateEnquiryForm } from "@/lib/whatsapp";
 import { getContactItems, type ContactItem } from "@/lib/contact";
+import { sendEnquiry } from "@/app/actions/send-enquiry";
 import { useEnquirySelection } from "@/components/enquiry-context";
 import { Eyebrow } from "@/components/section-heading";
 import { FormField, controlClass } from "@/components/form-field";
@@ -15,7 +16,9 @@ import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 
 type FieldName = keyof EnquiryFormData;
-type Status = "idle" | "submitting" | "success" | "prepared" | "error";
+type Status = "idle" | "submitting" | "sent" | "prepared" | "error";
+/** Which of the two delivery paths actually worked, so the confirmation can tell the truth. */
+type Delivery = { email: boolean; whatsapp: boolean };
 
 const emptyForm: EnquiryFormData = { name: "", company: "", phone: "", email: "", grade: "", quantity: "", packing: "", message: "" };
 
@@ -34,7 +37,7 @@ const fieldOrder: FieldName[] = ["name", "company", "phone", "email", "grade", "
 
 const NOT_SURE = "Not sure — need assistance";
 const gradeOptions = [...products.map((p) => p.name), NOT_SURE];
-const quantityOptions = [...packaging.standard.map((p) => p.size), "Custom"];
+const quantityOptions = [...packaging.standard.map((p) => p.size), NOT_SURE, "Custom"];
 const packingOptions = [...packaging.onDemand.map((p) => p.size), "Custom"];
 
 const contactIcons: Record<ContactItem["kind"], typeof Phone> = { phone: Phone, email: Mail, address: MapPin };
@@ -60,6 +63,8 @@ export function Enquiry() {
   const [errors, setErrors] = useState<EnquiryFormErrors>({});
   const [summary, setSummary] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [delivery, setDelivery] = useState<Delivery>({ email: false, whatsapp: false });
+  const [errorMessage, setErrorMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
   // A grade's "Enquire" button preselects it here (adjusted during render, not in an effect).
@@ -85,7 +90,7 @@ export function Enquiry() {
     onBlur: () => setErrors((prev) => ({ ...prev, [field]: validateEnquiryForm(data).errors[field] })),
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting.current) return;
 
@@ -100,15 +105,37 @@ export function Enquiry() {
 
     setSummary("");
     setCopied(false);
+    setErrorMessage("");
     submitting.current = true;
     setStatus("submitting");
+
+    // WhatsApp first and synchronously: a window opened after an `await` is blocked as a pop-up.
+    let whatsapp = false;
     try {
-      setStatus(submitEnquiry(data) ? "success" : "prepared");
+      whatsapp = openWhatsApp(buildWhatsAppMessage(data));
     } catch {
-      setStatus("error");
-    } finally {
-      submitting.current = false;
+      whatsapp = false;
     }
+
+    // Then email, so the lead survives even if the buyer never presses Send in WhatsApp.
+    let result: Awaited<ReturnType<typeof sendEnquiry>>;
+    try {
+      result = await sendEnquiry(data);
+    } catch {
+      result = { status: "error", message: "We could not send your enquiry just now." };
+    }
+
+    const email = result.status === "sent";
+    setDelivery({ email, whatsapp });
+    if (email || whatsapp) {
+      setStatus("sent");
+    } else if (result.status === "error") {
+      setErrorMessage(result.message);
+      setStatus("error");
+    } else {
+      setStatus("prepared");
+    }
+    submitting.current = false;
   };
 
   const copyDetails = async () => {
@@ -251,12 +278,23 @@ export function Enquiry() {
               </p>
 
               <div role="status" aria-live="polite" className="empty:hidden">
-                {status === "success" && (
+                {status === "sent" && (
                   <div className="mt-6 flex animate-panel-in items-start gap-4 rounded-lg border border-forest/15 bg-warm-white p-5">
                     <SuccessMark />
                     <div>
-                      <p className="font-serif text-2xl font-semibold text-forest">Enquiry ready in WhatsApp</p>
-                      <p className="mt-1 text-ink-muted">Review the message in WhatsApp and press Send to complete your enquiry.</p>
+                      <p className="font-serif text-2xl font-semibold text-forest">
+                        {delivery.email ? "Enquiry sent" : "Enquiry ready in WhatsApp"}
+                      </p>
+                      <p className="mt-1 text-ink-muted">
+                        {delivery.email
+                          ? "We’ll reply within 1 working day."
+                          : "Review the message in WhatsApp and press Send to complete your enquiry."}
+                      </p>
+                      {delivery.email && delivery.whatsapp && (
+                        <p className="mt-1 text-ink-muted">
+                          We&apos;ve also opened WhatsApp with your details — press Send there for the fastest reply.
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
@@ -276,9 +314,28 @@ export function Enquiry() {
                   </div>
                 )}
                 {status === "error" && (
-                  <p className="mt-6 flex animate-panel-in items-center gap-3 rounded-lg border border-terracotta-deep/40 bg-warm-white p-5 font-medium text-terracotta-deep">
-                    Something went wrong opening WhatsApp. Please try again.
-                  </p>
+                  <div className="mt-6 flex animate-panel-in items-start gap-4 rounded-lg border border-terracotta-deep/40 bg-warm-white p-5">
+                    <span aria-hidden="true" className="flex size-12 shrink-0 items-center justify-center rounded-full bg-terracotta/20 text-terracotta-deep">
+                      <Info className="size-6" />
+                    </span>
+                    <div>
+                      <p className="font-serif text-2xl font-semibold text-terracotta-deep">{errorMessage || "We could not send your enquiry just now."}</p>
+                      <p className="mt-1 text-ink-muted">
+                        Your details are safe in the form. Try again{phone ? ", call us," : ","} or copy them to send another way.
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <Button variant="outlineForest" onClick={copyDetails}>
+                          {copied ? <Check aria-hidden="true" className="size-4" /> : <Copy aria-hidden="true" className="size-4" />}
+                          {copied ? "Copied" : "Copy details"}
+                        </Button>
+                        {phone && (
+                          <ButtonLink href={phone.href} variant="outlineForest">
+                            Call {phone.value}
+                          </ButtonLink>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 )}
               </div>
 

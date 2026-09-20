@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Shrisantosh Traders — brand system.
+ * Shree Santosh Traders — brand system.
  * Contrast notes (WCAG AA): charcoal on cream 15:1 · ink-muted on cream 6.8:1 · cream on forest 11.5:1 ·
  * cream-muted on forest 7.9:1 · gold on forest 5.0:1 · botanical on gold 6.3:1.
  * Gold / terracotta / leaf are decorative on light surfaces; their -deep variants carry text (≥4.5:1).
@@ -196,9 +196,36 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  html {
+  html:not(.lenis) {
     scroll-behavior: smooth;
   }
+}
+
+/* Company-name intro. Hidden unless the head script chose to play it (so never shown without JS). */
+.intro {
+  display: none;
+}
+html[data-intro="play"] {
+  overflow: hidden;
+}
+html[data-intro="play"] .intro {
+  display: block;
+}
+html[data-intro="play"] .header-wordmark {
+  opacity: 0;
+}
+/* Hero entrance waits until the name starts flying to the header. */
+html[data-hero="wait"] #home,
+html[data-hero="wait"] #home * {
+  animation-play-state: paused !important;
+}
+
+/* Hero seed canvas sits in front of the pod so the burst is visible; it never blocks clicks. */
+.hero-seeds {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
 }
 
 /* Scroll reveal. Content stays visible without JavaScript. */

@@ -9,11 +9,14 @@ import { cn } from "@/lib/utils";
 
 const sectionIds = siteConfig.nav.map((item) => item.href.slice(1)).filter((id) => id !== "home");
 
+// Shared with the intro so the flying name lands pixel-perfect on the header logo.
+export const WORDMARK_LINE1_SIZE = "text-[1.15rem] min-[375px]:text-[1.3rem] sm:text-[1.4rem]";
+
 export function Wordmark({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
     <span className={cn("flex flex-col leading-none", className)}>
-      <span className={cn("font-serif font-semibold uppercase tracking-[0.08em]", compact ? "text-xl" : "text-[1.15rem] min-[375px]:text-[1.3rem] sm:text-[1.4rem]")}>Shrisantosh</span>
-      <span className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.42em] opacity-80">Traders</span>
+      <span className={cn("font-serif font-semibold uppercase tracking-[0.08em]", compact ? "text-xl" : WORDMARK_LINE1_SIZE)}>{siteConfig.wordmark.line1}</span>
+      <span className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.42em] opacity-80">{siteConfig.wordmark.line2}</span>
     </span>
   );
 }
@@ -72,7 +75,7 @@ export function SiteHeader() {
       >
         <div className="container-page flex h-(--header-h) items-center justify-between gap-6">
           <a href="#home" className="flex h-11 items-center" aria-label={`${siteConfig.name} — home`}>
-            <Wordmark />
+            <Wordmark className="header-wordmark" />
           </a>
 
           <nav aria-label="Main" className="hidden lg:block">

@@ -1,17 +1,23 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/data/site-config";
 import { packaging } from "@/data/packaging";
 import { products } from "@/data/products";
 import { ButtonLink } from "@/components/ui/button";
 import { BotanicalStem, CurveEdge, RingOutline, SeedScatter } from "@/components/decor";
+import { useHeroScroll } from "@/components/motion/use-hero-scroll";
 
 const delay = (ms: number) => ({ animationDelay: `${ms}ms` });
 
 export function Hero() {
   const standardPacks = packaging.standard.map((p) => p.size).join(" · ");
+  const sectionRef = useRef<HTMLElement>(null);
+  useHeroScroll(sectionRef);
 
   return (
-    <section id="home" aria-labelledby="hero-title" className="on-dark grain relative isolate overflow-hidden bg-forest text-cream">
+    <section ref={sectionRef} id="home" aria-labelledby="hero-title" className="on-dark grain relative isolate overflow-hidden bg-forest text-cream">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 animate-fade bg-[radial-gradient(90%_70%_at_78%_40%,#1e4d3b_0%,#12372a_50%,#0b2419_100%)]"
@@ -22,11 +28,13 @@ export function Hero() {
         <path d="M60 400C220 300 330 150 540 130s220 90 260 160" stroke="currentColor" strokeWidth="1" />
       </svg>
 
-      <div className="container-page grid gap-14 pb-20 pt-[calc(var(--header-h)+3rem)] md:pb-24 lg:min-h-[min(100svh,62rem)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:pb-28 lg:pt-[calc(var(--header-h)+2rem)]">
-        <div className="lg:col-span-7">
+      <canvas data-hero-seeds aria-hidden="true" className="hero-seeds" />
+
+      <div className="container-page relative z-10 grid gap-14 pb-20 pt-[calc(var(--header-h)+3rem)] md:pb-24 lg:min-h-[min(100svh,62rem)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:pb-28 lg:pt-[calc(var(--header-h)+2rem)]">
+        <div data-hero-copy className="lg:col-span-7">
           <p className="micro-label flex animate-rise items-center gap-3 text-gold" style={delay(80)}>
             <span aria-hidden="true" className="h-px w-10 bg-gold" />
-            Quality poppy seeds · Bulk &amp; export supply
+            {siteConfig.name} · Poppy seed suppliers
           </p>
 
           <h1 id="hero-title" className="mt-7 font-serif text-hero font-medium">
@@ -69,7 +77,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-[32rem] sm:aspect-[4/5] lg:col-span-5 lg:mr-0">
+        <div data-hero-visual className="relative mx-auto aspect-square w-full max-w-[32rem] sm:aspect-[4/5] lg:col-span-5 lg:mr-0">
           <div aria-hidden="true" className="absolute right-0 top-[7%] h-[86%] w-[80%] animate-fade rounded-t-full rounded-b-xl border border-cream/10 bg-cream/[0.06]" style={delay(420)} />
           <RingOutline className="-left-4 top-[4%] size-32 animate-settle border-gold/40 sm:size-40" />
 
@@ -80,6 +88,7 @@ export function Hero() {
               fill
               loading="eager"
               fetchPriority="high"
+              data-hero-pod
               sizes="(min-width: 1024px) 420px, 76vw"
               className="object-cover object-[50%_34%]"
             />
@@ -91,19 +100,24 @@ export function Hero() {
             <Image src="/images/grade-king.webp" alt="" fill sizes="144px" className="object-cover" />
           </div>
 
-          <div className="absolute right-0 top-[14%] animate-rise rounded-md bg-cream px-4 py-3 text-forest shadow-lift sm:px-5 sm:py-4" style={delay(720)}>
-            <p className="micro-label text-gold-deep">Quality grade</p>
-            <p className="mt-1 font-serif text-xl font-semibold sm:text-2xl">{products[0].category}</p>
+          {/* Outer div moves on scroll (GSAP); inner div keeps the CSS entrance animation. */}
+          <div data-hero-chip className="absolute right-0 top-[14%]">
+            <div className="animate-rise rounded-md bg-cream px-4 py-3 text-forest shadow-lift sm:px-5 sm:py-4" style={delay(720)}>
+              <p className="micro-label text-gold-deep">Quality grade</p>
+              <p className="mt-1 font-serif text-xl font-semibold sm:text-2xl">{products[0].category}</p>
+            </div>
           </div>
 
-          <div className="absolute bottom-0 right-[3%] animate-rise rounded-md border border-gold/30 bg-botanical/90 px-4 py-3 shadow-lift sm:px-5 sm:py-4" style={delay(820)}>
-            <p className="font-serif text-xl font-semibold text-gold sm:text-2xl">{standardPacks}</p>
-            <p className="micro-label mt-1 text-cream-muted">Bulk supply</p>
+          <div data-hero-chip className="absolute bottom-0 right-[3%]">
+            <div className="animate-rise rounded-md border border-gold/30 bg-botanical/90 px-4 py-3 shadow-lift sm:px-5 sm:py-4" style={delay(820)}>
+              <p className="font-serif text-xl font-semibold text-gold sm:text-2xl">{standardPacks}</p>
+              <p className="micro-label mt-1 text-cream-muted">Bulk supply</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <CurveEdge fill="#f6f0e4" className="absolute inset-x-0 -bottom-px" />
+      <CurveEdge fill="#f6f0e4" className="absolute inset-x-0 -bottom-px z-10" />
     </section>
   );
 }

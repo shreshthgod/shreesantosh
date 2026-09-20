@@ -28,27 +28,37 @@ export function buildWhatsAppMessage(formData: EnquiryFormData): string {
   return encodeURIComponent(msg);
 }
 
-export function isWhatsAppAvailable(): boolean {
+/** Digits of the configured WhatsApp number, or null while it is still a placeholder. */
+export function whatsAppDigits(): string | null {
   const raw = siteConfig.contact.whatsapp || "";
+  if (raw.includes("ADD_")) return null;
   const digits = raw.replace(/\D/g, "");
-  return digits.length >= 10 && !raw.includes("ADD_");
+  return digits.length >= 10 ? digits : null;
 }
 
+export function isWhatsAppAvailable(): boolean {
+  return whatsAppDigits() !== null;
+}
+
+/** Public profile link, used for the Organization `sameAs` entry. */
+export function whatsAppProfileUrl(): string | null {
+  const digits = whatsAppDigits();
+  return digits ? `https://wa.me/${digits}` : null;
+}
+
+/**
+ * Opens the WhatsApp hand-off. Must be called synchronously from the submit handler —
+ * a window opened after an `await` is treated as a pop-up and blocked.
+ */
 export function openWhatsApp(message: string): boolean {
-  const raw = siteConfig.contact.whatsapp || "";
-  const digits = raw.replace(/\D/g, "");
-  if (!digits || digits.length < 10 || raw.includes("ADD_")) {
-    console.warn("[WhatsApp] Contact number not configured. Message ready but link unavailable.");
-    return false;
-  }
-  const url = `https://wa.me/${digits}?text=${message}`;
-  window.open(url, "_blank", "noopener,noreferrer");
+  const digits = whatsAppDigits();
+  if (!digits) return false;
+  window.open(`https://wa.me/${digits}?text=${message}`, "_blank", "noopener,noreferrer");
   return true;
 }
 
 export function submitEnquiry(formData: EnquiryFormData): boolean {
-  const message = buildWhatsAppMessage(formData);
-  return openWhatsApp(message);
+  return openWhatsApp(buildWhatsAppMessage(formData));
 }
 
 export type EnquiryFormErrors = Partial<Record<keyof EnquiryFormData, string>>;
@@ -74,7 +84,7 @@ export function validateEnquiryForm(formData: EnquiryFormData): {
   }
 
   if (!formData.quantity) {
-    errors.quantity = "Choose a quantity, or pick “Custom quantity”.";
+    errors.quantity = "Choose a quantity, “Not sure” or “Custom”.";
   }
 
   if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {

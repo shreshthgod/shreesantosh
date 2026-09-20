@@ -12,9 +12,9 @@ export function SiteFooter() {
 
       <div className="container-page pb-8 pt-20 md:pt-28">
         <p aria-hidden="true" className="font-serif text-[clamp(3.25rem,12.5vw,11.5rem)] font-medium leading-[0.86] tracking-[-0.03em]">
-          Shrisantosh
+          {siteConfig.wordmark.line1}
           <br />
-          <em className="font-medium italic text-gold">Traders</em>
+          <em className="font-medium italic text-gold">{siteConfig.wordmark.line2}</em>
         </p>
         <span aria-hidden="true" className="mt-10 block h-px w-full bg-gradient-to-r from-gold/70 via-gold/30 to-transparent" />
 

@@ -73,7 +73,16 @@ export interface UseCase {
 
 export interface SiteConfig {
   name: string;
+  /** Registered trading name, for the footer legal line and Organization schema. */
+  legalName: string;
   shortName: string;
+  /** Two-line header/footer lockup. The only place the name is split for display. */
+  wordmark: { line1: string; line2: string };
+  /** Initials mark, for the favicon and the collapsed mobile header. */
+  monogram: string;
+  /** Optional trust signals. Rendered only when `isConfigured()` passes. */
+  established: string;
+  gstin: string;
   tagline: string;
   description: string;
   product: string;

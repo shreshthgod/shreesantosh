@@ -35,10 +35,10 @@ export function About() {
               <div aria-hidden="true" className="absolute -right-2 top-8 h-[84%] w-[78%] rounded-t-full rounded-b-xl bg-sage/60" />
               <RingOutline className="-top-4 left-2 size-24 border-gold/50" />
               <div className="absolute left-0 top-0 h-[88%] w-[80%] overflow-hidden rounded-t-full rounded-b-xl shadow-soft">
-                <Image src="/images/grade-shri.webp" alt="Illustrative pile of graded poppy seeds" fill sizes="(min-width: 1024px) 360px, 80vw" className="object-cover" />
+                <Image src="/images/poppy-seeds-bowl.webp" alt="Cleaned poppy seeds filling a wooden bowl, with loose seeds scattered on the surface around it" fill sizes="(min-width: 1024px) 360px, 80vw" className="object-cover" />
               </div>
               <div className="absolute bottom-0 right-0 size-32 overflow-hidden rounded-full border-4 border-warm-white shadow-lift sm:size-40">
-                <Image src="/images/grade-white-tinopal.webp" alt="" fill sizes="160px" className="object-cover" />
+                <Image src="/images/poppy-field-cultivation.webp" alt="Poppy pods ripening on their stems in an open field" fill sizes="160px" className="object-cover" />
               </div>
               <div className="absolute -left-2 bottom-[10%] rounded-md bg-forest px-5 py-4 text-cream shadow-lift sm:-left-6">
                 <p className="font-serif text-5xl font-medium leading-none text-gold">{processSteps.length}</p>
