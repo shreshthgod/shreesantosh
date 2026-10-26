@@ -63,3 +63,4 @@ project-details/ planning and handoff documents
 Brand text, contact details and navigation come from `src/data/site-config.ts` — never hard-code
 them in a component. Colours, type sizes and motion durations come from the `@theme` tokens in
 `src/app/globals.css`. See `AGENTS.md` for the full working rules.
+# shrisantosh
